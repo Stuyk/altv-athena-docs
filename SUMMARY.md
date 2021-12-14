@@ -3,21 +3,23 @@
 ## Info
 
 -   [Introduction](README.md)
--   [FAQ](documentation/faq.md)
--   [Changelog](documentation/changelog.md)
+-   [Changelog](documentation/general/changelog.md)
+-   [FAQ](documentation/general/faq.md)
+-   [Buy License](https://gumroad.com/l/SKpPN)
+
 
 ## Links
 
--   [Buy Athena License](https://gumroad.com/l/SKpPN)
--   [Athena Discord](https://discord.gg/pZvbJmKN8Y)
 -   [alt:V Official](https://altv.mp/)
+-   [Athena Discord](https://discord.gg/pZvbJmKN8Y)
 
 ## Installation
 
--   [1. Initial Setup](documentation/before-setup.md)
--   [2. Installation](documentation/installing-athena.md)
--   [3. Saving Changes & Updating](documentation/updating-athena.md)
--   [Debugging](documentation/debugging-athena.md)
+- [Windows](documentation/install/windows.md)
+- [Linux (Ubuntu 18.04+)](documentation/install/linux.md)
+- [Debugging](documentation/install/debugging.md)
+- [Updating](documentation/install/updating.md)
+
 
 ## Configuration
 

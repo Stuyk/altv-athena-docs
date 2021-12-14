@@ -14,15 +14,18 @@ https://docs.athenaframework.com/
 
 ## Development Stack
 
-* MongoDB
-* TypeScript
-* Vue 3
+* MongoDB (Database)
+* TypeScript / JavaScript (Programming Language)
+* Vue 3 (Frontend)
+* Vite (Vue 3 Tooling)
 
-## Where to Purchase?
+_Using modern development tools for a modern framework._
+
+## Purchase, Buy, and 7-Day Trial
 
 License keys may be purchased from [Athena Framework](https://athenaframework.com).
 
-_No there is not a lifetime package for Athena._
+_There is not a lifetime package for Athena._
 
 ## Why is it Open Source?
 
@@ -36,18 +39,41 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
 
 ## Feature List
 
--   Fully Open Source
--   Typescript
--   Scalable Folder Structure
--   Basic Unit Test Support
--   Character Editor
--   Character Selection
--   Character Info Support
--   Character Appearance Synchronization
--   Whitelist
-    -   Discord Role / Bot Integration
-    -   Console Commands
--   Console Commands
+- Partial Open Source
+- TypeScript
+-   Developer Features
+    -   No Clip
+    -   Teleport to Waypoint
+    -   Fast Reboot
+    -   Multiple Environment Configurations
+    -   Modification Support
+    -   Uses SWC for Fast Compilation
+        -   Roughly 400ms
+    - Vite for WebView, CEF, View Debugging
+    - Plugin System
+-    World
+    -   Synchronized World Time
+    -   Synchronized Weather Patterns
+    -   Different Weather Based on Region
+    -   Adjustable Configuration
+    -   Performance Grid for Object Interactions / Finding
+- Character
+  - Appearance
+  - Clothing
+  - Info
+  - Multiple Character Selection
+- Discord Integration
+  - Welcome List
+  - Discord Role / Bot Integration
+  - Login / Registration for Server
+  - oAuth2 Integration
+- Chat
+  - Command System
+  - Distance
+  - Built-in Commands
+  - Permission Based Commands
+  - Custom Commands
+- Console Commands
     -   Ban
     -   Unban
     -   Kick
@@ -58,37 +84,13 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
     -   Add to Whitelist
     -   Remove from Whitelist
 -   Player
-    -   Health Synchronization
-    -   Armour Synchronization
-    -   Play 3D Custom Sounds (Short)
-    -   Play 2D Custom Sounds (Short)
-    -   Food Stat
-    -   Water Stat
+    -   Food
+    -   Water
+    -   Custom Object Prop Synchronization
+    -   Revive After 'x' Seconds
 -   Name Tags
     -   Display after 7.5s \(Used for Hiding Names Partially\)
     -   Names Hidden in Vehicles
--   Discord Based Authentication / Login
--   Admin System
-    -   Utilizes the Permission System
-    -   Various Admin Commands
-    -   NoClip Command
--   Chat System
-    -   Send Messages to Closest Players
-    -   Create Custom Commands
-    -   Assign Permission Values to Commands
--   Voice System
-    -   Uses built-in Voice by alt:V
-    -   Spatial, and Distance Built-in
-    -   Can be toggled off for the classic SAMP experience
--   Permission System
-    -   A basic permission system for running commands.
-    -   Allows commands to be restricted to specific groups.
--   World
-    -   Synchronized World Time
-    -   Synchronized Weather Patterns
-    -   Different Weather Based on Region
-    -   Adjustable Configuration
-    -   Performance Grid for Object Interactions / Finding
 -   Interaction System
     -   Parse Objects by Section
     -   Add Custom Interactions Easily
@@ -98,12 +100,15 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
     -   Global Blip Controller
     -   Repeat Blips are Streamed
     -   Automatically Generate Blips for Useable Objects (Atms, Fuel, etc.)
--   Marker System
-    -   Global Marker Controller
-    -   Easily add and remove global markers
--   Text Label System
-    -   Global Text Label Controller
-    -   Easily add and remove text labels
+- External Stream Service
+  - Stream Service Utilizes Web Sockets
+  - Create Custom Streams of Data for Players
+  - Automatically Stream the Following
+    - Objects
+    - Markers
+    - Text Labels
+    - Help Text
+    - Item Drops
 -   Currency System
     -   Deposit Currency
     -   Withdraw Currency
@@ -111,12 +116,12 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
 -   Vehicle System
     -   Control Vehicle Door Locks
     -   Handle Vehicle Ownership
-    -   Handle Vehicle Synchronization Pop-in
-    -   Seatbelt / Handle Window Fly-through
     -   Control Vehicle Door States
     -   Fuel
     -   Persistent Vehicle Spawning
+    -   
 -   Inventory System
+    -   Custom Drag & Drop System
     -   Drop Items
     -   Pickup Items
     -   Move Items
@@ -147,14 +152,16 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
     -   Name Individual Items
     -   Describe Individual Items
     -   Separate Item Equips
+    -   Customize Each Clothing Shop
+    -   Restrict Clothing Items
 - Garage System
-    - 17 Garages Across the Map
     - Store Vehicles
     - Spawn Vehicles
 - Expandable HUD System
     - Easily create a dynamic HUD
     - Add New HUD Elements
     - Remove HUD Elements
+    - Built with Vue 3
 -   Toolbar System
     -   Equip an item in a Toolbar Equippable Item
     -   Press 1-4 to swap items in toolbar
@@ -181,11 +188,6 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
     -   Spawn Vehicles from Garage After Purchase
 -   Extendable Core Resource
     -   Extend the core resource by writing your own code in the 'plugins' folder.
--   Streamer Service
-    -   Static Global Streaming Service
-    -   Marker Streaming
-    -   Object Streaming
-    -   Text Label Streaming
 -   Interior System
     -   Create Interiors Easily
     -   Specify Different Interior Types (House, Faction, System)

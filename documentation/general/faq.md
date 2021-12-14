@@ -5,17 +5,14 @@ description: Frequently asked questions.
 # FAQ
 
 - [FAQ](#faq)
-  - [Should I use this without knowing programming?](#should-i-use-this-without-knowing-programming)
-  - [Do I actually need to buy a license?](#do-i-actually-need-to-buy-a-license)
-  - [How do I purchase a license?](#how-do-i-purchase-a-license)
-  - [Is there a lifetime package?](#is-there-a-lifetime-package)
-  - [Why should I buy this framework?](#why-should-i-buy-this-framework)
-  - [Do you have a Roadmap?](#do-you-have-a-roadmap)
+  - [What is Athena?](#what-is-athena)
+  - [Can non-developers use this?](#can-non-developers-use-this)
+  - [What is included?](#what-is-included)
+  - [How often is Athena Updated?](#how-often-is-athena-updated)
+  - [Lifetime License?](#lifetime-license)
   - [What happens after Athena stops development?](#what-happens-after-athena-stops-development)
   - [Server Specification Recommendations](#server-specification-recommendations)
-  - [How do I install this one linux!?](#how-do-i-install-this-one-linux)
-  - [How do I keep my files while staying up-to-date?](#how-do-i-keep-my-files-while-staying-up-to-date)
-  - [Why MongoDB?](#why-mongodb)
+  - [MongoDB?](#mongodb)
   - [Can I use MySQL?](#can-i-use-mysql)
   - [How do I use a CDN?](#how-do-i-use-a-cdn)
   - [Downloads are super slow?](#downloads-are-super-slow)
@@ -24,47 +21,49 @@ description: Frequently asked questions.
   - [May I share my license?](#may-i-share-my-license)
   - [Theoretical Player Limitations?](#theoretical-player-limitations)
   - [Cannot Interact with Anything](#cannot-interact-with-anything)
-  - [How long until 'x' feature?](#how-long-until-x-feature)
-  - [How do I preview the Athena project?](#how-do-i-preview-the-athena-project)
-  - [How do I check what version I am using?](#how-do-i-check-what-version-i-am-using)
-  - [Failed to contact server to post login details?](#failed-to-contact-server-to-post-login-details)
-  - [Failed to find access\_token](#failed-to-find-access_token)
+  - [What Version am I using?](#what-version-am-i-using)
   - [Interfaces are sometimes laggy or delayed.](#interfaces-are-sometimes-laggy-or-delayed)
   - [What server hosts do your recommend for deployment?](#what-server-hosts-do-your-recommend-for-deployment)
   - [How do I switch branches?](#how-do-i-switch-branches)
   - [What about mods?](#what-about-mods)
   - [What is Ares?](#what-is-ares)
   - [Do I have to use Discord?](#do-i-have-to-use-discord)
-  - [Images are Broken in-game](#images-are-broken-in-game)
 
-## Should I use this without knowing programming?
+## What is Athena?
 
-That is your own decision to make. However, having actual programming knowledge will make using this framework infinitely easier to understand and build off of. **IF YOU CAN'T USE COMMAND LINE TERMINALS THIS IS NOT FOR YOU.**
+Athena is a Roleplay Framework that lets developers build out their custom Roleplay Server on the alt:V Client. It includes a plethora of tools and APIs to quickly build a robust Roleplay Server.
 
-## Do I actually need to buy a license?
+## Can non-developers use this?
 
-If you respect the development that I'm doing and the open source nature of the project then yes. This costs me a lot of my personal time to create an environment that new developers and experienced developers will both understand with a little bit of time. I've written a lot of open source alt:V resources and this builds on experience you may not get otherwise.
+Yes, but also no. It is highly recommended that you at least have a small understanding of JavaScript to work with TypeScript. This Framework is recommended for developers, and modders who like to tweak and create code.
 
-## How do I purchase a license?
+## What is included?
 
-You may obtain a license from [https://gum.co/SKpPN](https://gum.co/SKpPN). The process is entirely automated. Please review the documentation and installation instructions for booting up the gamemode after purchase.
+When you purchase an Athena License Key you will get access to the following:
 
-## Is there a lifetime package?
+* Boot the Script
+* Documentation
+* Discord Support
+* Assistance with Installation, and Booting
+* General Script Support
+  * No this does not mean the author will write scripts for you.
+* On-going Support for Bug Fixes in Core Features
+
+## How often is Athena Updated?
+
+Athena is updated at a very frequent rate. Meaning that the latest commits are always public and can always be pulled down.
+
+However, the end user is responsible for pulling these changes and maintaining their private fork of this repository.
+
+## Lifetime License?
 
 No, we only offer a subscription based roleplay script as this is a solid way for us to continue pushing updates for each change that GTA 5 receives. Paying for Athena means you are receiving support for upcoming changes, performance improvements, and new features.
 
-
-## Why should I buy this framework?
-
-You will be able to startup a Roleplay server almost out of the gate by the time the core features of this project are completed. It's written in a way that makes it extendable and can tap into the various utilities that are built into this script. You get my experience, and intellectual knowledge crafted into a neat package for your consumption. You get the right to modify, and use this framework by simply supporting the core development work needed to create a stable experience.
-
-## Do you have a Roadmap?
-
-No. Unfortunately a Roadmap is determined based on the needs of the main developer. If there is a need for reduced build times, the main developer will work on increasing build times. If there is a need for a phone system, the phone system will be written. It's all dependent on the origin of a problem and what needs to be done to reach a solution for that specific problem.
+Development is a rapid environment with never-ending changes.
 
 ## What happens after Athena stops development?
 
-The script becomes fully open source and the bootup instructions are released publicly for everyone to gain access. However, this project will likely see at least 3 years of on-going development, performance improvements, and pushing for increased ease-of-use.
+The script becomes fully open source and the bootup instructions are released publicly for everyone to gain access. However, this project will likely see at least 5 years of on-going development, performance improvements, and pushing for increased ease-of-use.
 
 ## Server Specification Recommendations
 
@@ -80,19 +79,7 @@ You do not need a ton of RAM for a GTA:V server. Make sure you're not overdoing 
 - Anti-DDoS Service
 ```
 
-## How do I install this one linux!?
-
-Here's a video that covers the entire installation process for Athena on Linux.
-
- https://www.youtube.com/watch?v=5aXU_4-6tWI
-
-## How do I keep my files while staying up-to-date?
-
-In most cases if you put things inside of the extras folder for Athena you will not lose them when you pull down updates from the main Athena repository. It is highly recommended that you get a firm grasp on git as far as pulling, merging, etc.
-
-Check out the installation guide for Athena to get an understanding of what merge conflicts are. There's even a video that covers the topic.
-
-## Why MongoDB?
+## MongoDB?
 
 If you are not handling millions of customers at a time then MongoDB is more than sufficient for your Roleplay server. MongoDB and Javascript go hand in hand and it's extremely easy to work with MongoDB.
 
@@ -130,7 +117,7 @@ Licenses are currently limited to 5 IP\(s\) at any given time. If the number of 
 
 ## Theoretical Player Limitations?
 
-The Athena framework has not been tested with high player counts yet. However, compared to the old code of O:RP and the steps I've taken to ensure that client's get the best performance they can. I do believe Athena is capable of handling at least 500 players at a time. However, this will only apply to the vanilla version of Athena which means not using any additional mods.
+The Athena framework has not been tested with high player counts yet. However, compared to the old code of O:RP and the steps I've taken to ensure that client's get the best performance they can. I do believe Athena is capable of handling at least 600 players at a time. However, this will only apply to the vanilla version of Athena which means not using any additional mods.
 
 For those who are looking to host a voice server you will likely end up hitting a cap of around 800 players as TeamSpeak may only handle 800 users at any given time.
 
@@ -142,25 +129,10 @@ Obviously, you should not be running these servers on the same infrastructre.
 
 Make sure you press 'left alt' before you do anything. This turn son a bunch of loops to help with interacting and figuring out what the player needs to do. This is purposely left off to ensure client's get the highest performacne while playing with the Athena Framework.
 
-## How long until 'x' feature?
 
-I can't predict the future. However, I work on this project when I'm not being bogged down by my work and general life.
-
-## How do I preview the Athena project?
-
-You can view some general screenshots, gifs, etc. in the Athena Discord.
-
-## How do I check what version I am using?
+## What Version am I using?
 
 Check your `package.json` and check under `version`.
-
-## Failed to contact server to post login details?
-
-Usually means port 7790 is closed. Make sure to open it on your router and in your windows &gt; firewall. Use [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/) to verify your port\(s\) are open while the serving is running.
-
-## Failed to find access\_token
-
-Ares may have run into an issue when trying to assign a Token to a user who was attempting to login. This is a pretty rare occurrence. Have the user try logging in again.
 
 ## Interfaces are sometimes laggy or delayed.
 
@@ -193,6 +165,4 @@ Ares is the backend service and Discord Authorization handler. Ares provides a s
 
 If you wish to use a whitelist and some other features then the answer is yes. However, you may remove the Discord based login and you will have to make a large amount of changes to unhook the Discord Authentication service.
 
-## Images are Broken in-game
-
-You need to port forward 9111 to enable the web server for your server.
+It is highly recommended to use oAuth2 as you will not be responsible for storing sensitive player information like passwords.

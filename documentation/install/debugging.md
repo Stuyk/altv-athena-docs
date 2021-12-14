@@ -14,6 +14,8 @@ If it's at the end of a `bracket` then it's inside of the bracket that is causin
 
 To utilize this simply run in your terminal:
 
+Enter the following in a terminal:
+
 ```
 npx tsc
 ```
