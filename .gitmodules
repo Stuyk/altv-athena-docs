@@ -1,0 +1,3 @@
+[submodule "src/pages/plugins"]
+	path = src/pages/plugins
+	url = https://github.com/Stuyk/altv-athena-plugins-md

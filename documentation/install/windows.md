@@ -348,7 +348,7 @@ npm run dev
 
 Check if the ports are currently open **while the server is running**. Check port `7788`.
 
-https://www.yougetsignal.com/tools/open-ports/
+[Check Ports with YouGetSignal](https://www.yougetsignal.com/tools/open-ports/)
 
 # Connecting
 

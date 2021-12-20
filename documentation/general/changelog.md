@@ -171,6 +171,10 @@ description: List of all the changes and current versions.
 + Fixed Action Menu Bug
 + Internalized lots of client-side code
 + Prevent client-side streamer from being Invoked
++ Made ATM a Plugin
++ Made Clothing a Plugin
++ Made Garages a Plugin
++ Made Interiors a Plugin
 ```
 
 ## 2.0.3
