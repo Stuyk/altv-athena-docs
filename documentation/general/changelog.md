@@ -175,6 +175,9 @@ description: List of all the changes and current versions.
 + Made Clothing a Plugin
 + Made Garages a Plugin
 + Made Interiors a Plugin
++ Fixed Vehicle Enter and Start Bug
++ Fixed Input Menu Disabled Bug
++ Fixed Vehicle Enter Bug
 ```
 
 ## 2.0.3
