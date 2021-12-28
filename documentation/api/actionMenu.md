@@ -1,10 +1,11 @@
 ---
-description: Learn how to use an Action Menu.
+description: >-
+    Create an infinitely scaling menu that can have multiple callbacks, options, etc.
 ---
 
-# Adding an Action Menu
+# playerFuncs.emit.createCredits
 
-Actions menu's are a custom menu that makes various event calls either on server-side or client-side.
+Create an infinitely scaling menu that can have multiple callbacks, options, etc.
 
 ![](https://i.imgur.com/XKdwj0i.png)
 
@@ -19,45 +20,34 @@ Actions menu's are a custom menu that makes various event calls either on server
 -   Enter Keypress
 -   Backspace Keypress
 
-## Usage
+_Accessible on Server Side_
 
-This is an example from the `plugins` folder.
-This is an over the top menu with multiple menu levels and pointless functionality.
+# Example
 
 ```ts
-import * as alt from 'alt-server';
-import { playerFuncs } from '../../server/extensions/Player';
-import ChatController from '../../server/systems/chat';
-import { ANIMATION_FLAGS } from '../../shared/flags/animation';
-import { PERMISSIONS } from '../../shared/flags/permissions';
-import { Action } from '../../shared/interfaces/Actions';
-import { Animation } from '../../shared/interfaces/Animation';
-
-ChatController.addCommand('actionmenu', '/actionmenu - Opens test action menu', PERMISSIONS.ADMIN, handleCommand);
-
-function handleCommand(player: alt.Player): void {
-    // Create an action called facePalm that uses the Animation Interface.
-    const facePalm: Action<Animation> = {
+function showActionMenu(player: alt.Player) {
+// Create an action called facePalm that uses the Animation Interface.
+    const facePalm: Action = {
         eventName: 'animation:Action:Server',
         isServer: true,
         data: {
             dict: 'anim@mp_player_intupperface_palm',
             name: 'idle_a',
             duration: 3000,
-            flags: ANIMATION_FLAGS.UPPERBODY_ONLY
-        }
+            flags: ANIMATION_FLAGS.UPPERBODY_ONLY,
+        },
     };
 
     // Create an action called gangSign that uses the Animation Interface.
-    const gangSign: Action<Animation> = {
+    const gangSign: Action = {
         eventName: 'animation:Action:Server',
         isServer: true,
         data: {
             dict: 'mp_player_int_uppergang_sign_a',
             name: 'mp_player_int_gang_sign_a',
             duration: 3000,
-            flags: ANIMATION_FLAGS.UPPERBODY_ONLY
-        }
+            flags: ANIMATION_FLAGS.UPPERBODY_ONLY,
+        },
     };
 
     // Create the menu and send it to the player/
@@ -68,25 +58,25 @@ function handleCommand(player: alt.Player): void {
             // Option 1 in the menu is a single event.
             'Option 1': {
                 eventName: 'hello:From:Client',
-                isServer: true
+                isServer: true,
             },
             // Animations in the menu contains 2 more events. You can also add another menu.
             Animations: {
                 'Face Palm': facePalm,
-                'Gang Sign': gangSign
+                'Gang Sign': gangSign,
                 // Creates a menu in the menu.
                 'More Animations': {
                     'Face Palm 2': facePalm, // Just using the same one for testing purposes
-                    'Gang Sign 2': gangSign
+                    'Gang Sign 2': gangSign,
                     // Creates a menu in the menu in the menu
                     'More More Animations': {
                         'Face Palm 3': facePalm, // Just using the same one for testing purposes
-                        'Gang Sign 3': gangSign
+                        'Gang Sign 3': gangSign,
                         // etc...
-                    }
-                }
-            }
-        }
+                    },
+                },
+            },
+        },
     );
 }
 

@@ -178,6 +178,11 @@ description: List of all the changes and current versions.
 + Fixed Vehicle Enter and Start Bug
 + Fixed Input Menu Disabled Bug
 + Fixed Vehicle Enter Bug
++ Added Agenda System (Login Sequence)
++ Added Temporary Vehicles for Jobs
++ Added Job Checks for Vehicles
++ Added Item Registry
++ Fixed Storage in Vehicle Access
 ```
 
 ## 2.0.3

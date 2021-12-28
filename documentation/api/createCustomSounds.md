@@ -7,10 +7,10 @@ description: >-
 
 It is highly recommended that you keep your sounds compressed and keep the quality below `128`. We use the open source format known as `.ogg` for this game mode so it's recommended that you download [Audacity](https://www.audacityteam.org/download/) if you plan on doing a lot of audio editing.
 
-You can place sounds inside of
+Folder Placement
 
 ```
-src/core/client/views/hud/html/sounds
+src-webviews/public/assets/sounds/yourFile.ogg
 ```
 
 ## Editing Sounds with Audacity
@@ -26,3 +26,29 @@ Then you are ready to export. Go to file `file -> export-> ogg`
 ![](https://i.imgur.com/WV6CQRC.png)
 
 I usually change the quality to about `5` when I export. The quality won't matter that much for most of these small sounds.
+
+# Playing Sounds
+
+Sounds can be played in a 2D environment or a 3D environment. Depends on what you want to emit to a player.
+
+Sounds should not last forever, and they should be used temporarily.
+
+## 2D Environment
+
+Simply use the playerFuncs to call the name of your file. Remove `.ogg` from the audioName.
+
+```ts
+// Last parameter is volume. 0 - 1
+playerFuncs.emit.sound2D(player, 'unlock', 0.75);
+```
+
+## 3D Environment
+
+Simply use the playerFuncs to call the name of your file. Remove `.ogg` from the audioName.
+
+You must pass either a player, or vehicle as the target location of the audio.
+
+```ts
+// Last parameter is volume. 0 - 1
+playerFuncs.emit.sound2D(player, 'unlock', player.vehicle);
+```

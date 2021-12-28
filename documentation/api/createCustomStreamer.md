@@ -1,3 +1,8 @@
+---
+description: >-
+    Create a custom streamer for streaming data.
+---
+
 # Adding Custom Streamers
 
 A custom streamer is something that will allow you to synchronize a static object, pedestrian, etc. in the world for all player(s) to see. It inheritely uses the streaming service that is provided by the Athena Framework.
@@ -14,9 +19,11 @@ The custom function inside of your streamer will come back with the player and t
 
 You can then take the data and pass it client-side and do something with it.
 
-This makes synchronizing custom things very easy for static object(s).
+This makes synchronizing custom things very easy for static data sets.
 
-## Basic Custom Streamer
+## Custom Streamer Server Side
+
+Create a custom streamer on server-side. The client-side code can be found below.
 
 _Imports may vary_
 
@@ -59,6 +66,7 @@ export class DoorController {
      * Called when stream data is updated for this type.
      */
     static update(player: alt.Player, doors: Array<IDoorState>) {
+        // You should listen to this event on client-side and do something with it.
         alt.emitClient(player, 'populate:Doors', doors);
     }
 
@@ -84,4 +92,16 @@ export class DoorController {
 }
 
 DoorController.init();
+```
+
+## Custom Streamer Client Side
+
+You have to figure out what you do with the data.
+
+Check out some of the other core streamers to get a general idea of how to build this out.
+
+```typescript
+alt.onServer('populate:Doors', (someData: Array<IDoorState>) => {
+    console.log(JSON.stringify(someData, null, '\t'));
+});
 ```
