@@ -7,6 +7,8 @@ description: >-
 
 Create a simple spinner in the bottom-right of the client's screen.
 
+![](https://thumbs.gfycat.com/PaleShadowyDamselfly-size_restricted.gif)
+
 _Accessible on Server Side_
 
 # Example

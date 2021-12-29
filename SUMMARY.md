@@ -73,6 +73,7 @@
 - [Meta](documentation/player/meta.md)
 - [Notifications](documentation/player/notification.md)
 - [Particle](documentation/player/particle.md)
+- [Progress Bar](documentation/player/progressBar.md)
 - [Shard](documentation/player/createShard.md)
 - [Spinners](documentation/player/createSpinner.md)
 
