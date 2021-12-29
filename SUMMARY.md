@@ -74,6 +74,7 @@
 - [Notifications](documentation/player/notification.md)
 - [Particle](documentation/player/particle.md)
 - [Progress Bar](documentation/player/progressBar.md)
+- [Save](documentation/player/save.md)
 - [Shard](documentation/player/createShard.md)
 - [Sound](documentation/player/sound.md)
 - [Spinners](documentation/player/createSpinner.md)
