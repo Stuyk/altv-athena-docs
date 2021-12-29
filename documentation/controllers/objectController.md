@@ -2,7 +2,7 @@
 description: Learn how to add objects to the object streamer.
 ---
 
-# Summary
+# ServerObjectController
 
 Object(s) inheritely are always global unless they are attached to an interior. In our case we'll just be generating some basic objects and explaining what is happening.
 

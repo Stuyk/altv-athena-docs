@@ -10,6 +10,7 @@ There is only so many configuration options that can be exported and tweaked. Ho
 
 The main configuration can be found in `src/core/server/athena/main.ts`
 
-## What about the Rest?
+## Where is Server Configuration?
 
-Maintain a private repo to make configuration changes yourself.
+The server configuration can be found in `configs/`
+

@@ -6,7 +6,6 @@ description: Learn how to add items to your game mode.
 
  [Keywords and Inventory Syntax](#keywords-and-inventory-syntax)
 - [Adding Items](#adding-items)
-- [Video Guide](#video-guide)
 - [Keywords and Inventory Syntax](#keywords-and-inventory-syntax)
 - [Difference Between Slot and Index](#difference-between-slot-and-index)
 - [Using Inventory Functions](#using-inventory-functions)
@@ -17,54 +16,38 @@ description: Learn how to add items to your game mode.
   - [Working with Player Inventories](#working-with-player-inventories)
   - [Item Effects](#item-effects)
     - [Item Example](#item-example)
-    - [Item Effect Receive](#item-effect-receive)
-
-# Video Guide
-
-[![Item Creation Video](https://img.youtube.com/vi/dPztbrxcqQ8/0.jpg)](https://www.youtube.com/watch?v=dPztbrxcqQ8)
-
+  - [Item Factory](#item-factory)
 
 # Keywords and Inventory Syntax
 
-The inventory is setup in a way to have multiple pages. Which means it is an array of array(s). Which is a bit of a weird concept if you're only used to a single array of items.
-
-What this means is that each array inside of the inventory has the items in it.
+The inventory is setup as a single array. The `slot` determines how the item is displayed in the inventory interface and the `index` is where the item is in the array.
 
 So accessing individual items for a player is something like...
 
 ```ts
-player.data.inventory[0][0]
+player.data.inventory[0]
 ```
-
-This will get the first `tab` or `page` of the player's inventory and the first `item` in the `tab` or `page`.
 
 Here's what they may look like from a visual perspective.
 
 ```ts
 [
-    [
-        {
-            name: 'Burger',
-            description: 'A delicious burger...',
-            quantity: 1,
-            slot: 0
-        }
-    ],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [
-        {
-            name: 'Taco',
-            description: 'A classic Mexican street taco.',
-            quantity: 0,
-            slot: 5
-        }
-    ]
+    {
+        name: 'Burger',
+        description: 'A delicious burger...',
+        quantity: 1,
+        slot: 1
+    }
+    {
+        name: 'Taco',
+        description: 'A classic Mexican street taco.',
+        quantity: 0,
+        slot: 5
+    }
 ]
 ```
+
+_In the above example if we used `player.data.inventory[0]` we sould get the burger item_
 
 # Difference Between Slot and Index
 
@@ -75,21 +58,22 @@ Index is where the item is placed inside of the array.
 If a function returns an index for an inventory item then it means you can get the item like...
 
 ```ts
-player.data.inventory[someTabNumber][index]
+player.data.inventory[index]
 ```
 
 If the function returns a slot for an inventory item. Then it means you need to get it like this...
 
 ```ts
-const item = player.data.inventory[someTabNumber].find(x => x.slot === someSlotNumber);
+const item = player.data.inventory.find(x => x.slot === someSlotNumber);
 ```
 
 # Using Inventory Functions
 
-The inventory does not always save after each update. If you use any inventory functions you should be throwing a save.
+The inventory does not always save after each update. If you use any inventory functions you should be throwing a save and a sync immediately after performing any functions.
 
 ```ts
 playerFuncs.save.field(player, 'inventory', player.data.inventory);
+playerFuncs.sync.inventory(player)
 ```
 
 # Deep Cloning Objects
@@ -141,10 +125,11 @@ Here's the basic gist of it.
 
 ```typescript
 const slotInfo = playerFuncs.inventory.getFreeInventorySlot(player);
-playerFuncs.inventory.inventoryAdd(player, newItem, slotInfo.slot, slotInfo.tab);
+playerFuncs.inventory.inventoryAdd(player, newItem, slotInfo.slot);
 
 // Don't forget to save the inventory after adding it.
 playerFuncs.save.field(player, 'inventory', player.data.inventory);
+playerFuncs.sync.inventory(player)
 ```
 
 ## Removing Players Items
@@ -158,19 +143,22 @@ if (!slotInfo) {
     return;
 }
 
-const item: Item = playerFuncs.inventory.getInventoryItem(player, slotInfo.slot, slotInfo.tab);
+const item: Item = playerFuncs.inventory.getInventoryItem(player, slotInfo.slot);
 if (!item) {
     playerFuncs.emit.message(player, `Item was not found!`);
     return;
 }
 
-const didRemoveItem: boolean = playerFuncs.inventory.inventoryRemove(player, slotInfo.slot, slotInfo.tab);
+const didRemoveItem: boolean = playerFuncs.inventory.inventoryRemove(player, slotInfo.slot);
 if (!didRemoveItem) {
     playerFuncs.emit.message(player, `Did not find item to remove!`);
     return;
 }
 
 alt.log(`The item was removed!`);
+
+playerFuncs.save.field(player, 'inventory', player.data.inventory);
+playerFuncs.sync.inventory(player)
 ```
 
 ## Working with Player Inventories
@@ -178,23 +166,22 @@ alt.log(`The item was removed!`);
 Depending on what you want to do with the player inventory there are a ton of ways to work with it. However, more often than not the most common use case for working with an inventory is finding an item and removing it. Which is what we'll be covering here.
 
 ```ts
-import * as alt from 'alt-server';
-import { playerFuncs } from '../../server/extensions/Player';
-
 function findPlayerBurgerItem(player: alt.Player) {
-    const someItemInfo = playerFuncs.inventory.isInInventory(player, { name: 'Burger' });
-    if (!someItemInfo) {
+    const itemInfo = playerFuncs.inventory.isInInventory(player, { name: 'Burger' });
+    if (!itemInfo) {
         // Item does not exist.
         return;
     }
 
-    const item = player.data.inventory[someItemInfo.tab][someItemInfo.index];
-    console.log(item);
-}
+    // Get the found item, remove it, save inventory, and sync inventory.
+    const item = player.data.inventory[itemInfo.index];
+    if (!playerFuncs.inventory.inventoryRemove(player, itemInfo.slot)) {
+        // Did not remove item successfully
+        return;
+    }
 
-// Removes an item based on the `slot` of the item.
-function removePlayerBurgerItem(player: alt.Player, tab: number, slot: number) {
-    playerFuncs.inventory.inventoryRemove(player, slot, tab);
+    playerFuncs.save.field(player, 'inventory', player.data.inventory);
+    playerFuncs.sync.inventory(player)
 }
 ```
 
@@ -223,16 +210,58 @@ const teleporterItem: Item = {
         event: 'effect:Teleport'
     }
 };
-```
-
-### Item Effect Receive
-
-```typescript
-import * as alt from 'alt-server';
-import { playerFuncs } from '../../server/extensions/Player';
-import { Item } from '../../shared/interfaces/Item';
 
 alt.on('effect:Teleport', (player: alt.Player, item: Item) => {
     playerFuncs.emit.message(player, `You consumed ${item.name}`);
 });
+```
+
+## Item Factory
+
+The item registry is a relatively new concept but it allows you to create item `templates` that can be fetched from the Database so you're not storing them in your code as much. Your mileage may vary on this system as I personally do not use it very much.
+
+Below is an example of how to create, fetch, and quantify an item before giving it to a player.
+
+```typescript
+async function createSomeItem(player: alt.Player) {
+    const teleporterItem: Item = {
+        name: `Teleporter`,
+        dbName: `cool-teleporter`,
+        description: `Debug: Should be able to call an event with this`,
+        icon: 'teleporter',
+        slot: 5,
+        quantity: 1,
+        behavior: ITEM_TYPE.CAN_DROP | ITEM_TYPE.CAN_TRADE | ITEM_TYPE.CONSUMABLE,
+        data: {
+            event: 'effect:Teleport'
+        }
+    };
+
+    await ItemFactory.add(teleporterItem);
+}
+
+async function giveSomeItem(player: alt.Player) {
+    const newItem = await ItemFactory.get('cool-teleporter');
+    if (!newItem) {
+        // Item does not exist
+        return;
+    }
+
+    newItem.quantity = 1;
+
+    const slotInfo = playerFuncs.inventory.getFreeInventorySlot(player);
+    if (!slotInfo) {
+        // No Room
+        return;
+    }
+
+    if (!playerFuncs.inventory.inventoryAdd(player, newItem, slotInfo.slot)) {
+        // Could not add item
+        return;
+    }
+
+    // Don't forget to save the inventory after adding it.
+    playerFuncs.save.field(player, 'inventory', player.data.inventory);
+    playerFuncs.sync.inventory(player)
+}
 ```

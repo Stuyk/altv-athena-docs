@@ -1,6 +1,5 @@
 ---
-description: >-
-  Create a ColShape with multiple corners. Great for turfs.
+description: Create a ColShape with multiple corners. Great for turfs.
 ---
 
 # ServerPolygonController

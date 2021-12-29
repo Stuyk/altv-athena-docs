@@ -1,9 +1,8 @@
 ---
-description: >-
-  Create an in-world static pedestrian.
+description: Create an in-world static pedestrian.
 ---
 
-# PedController
+# ServerPedController
 
 Create an in-world static pedestrian. They do not move, they cannot move, and they will not move.
 
@@ -27,6 +26,8 @@ PedController.append(ped);
 
 # Example - Single User
 
+_Keep in mind you should have a player reference to use this_
+
 ```ts
 const ped: IPed = {
     uid: `ped-${Math.floor(Math.random() * 500000)}`,
@@ -39,4 +40,24 @@ const ped: IPed = {
 };
 
 PedController.addToPlayer(ped);
+```
+
+# Play Animations for a Ped
+
+```ts        
+let anim1: Animation = {
+    dict: 'random@arrests@busted',
+    name: 'idle_a',
+    flags: ANIMATION_FLAGS.REPEAT | ANIMATION_FLAGS.UPPERBODY_ONLY,
+    duration: -1
+}
+
+let anim2: Animation = {
+    dict: 'random@arrests',
+    name: 'idle_2_hands_up',
+    flags: ANIMATION_FLAGS.NORMAL | ANIMATION_FLAGS.STOP_LAST_FRAME,
+    duration: -1
+}
+
+PedController.playAnimation('test-ped-1', [anim1,anim2])
 ```

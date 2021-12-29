@@ -1,6 +1,5 @@
 ---
-description: >-
-  Create in-world help text that is displayed in a 3D location.
+description: Create in-world help text that is displayed in a 3D location.
 ---
 
 # WorldNotificationController
@@ -22,6 +21,8 @@ const uid = WorldNotificationController.append({
 ```
 
 # Example - Single User
+
+_Keep in mind you should have a player reference to use this_
 
 ```ts
 const uid = WorldNotificationController.addToPlayer(player, {

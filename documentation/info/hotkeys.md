@@ -4,9 +4,9 @@ description: All of the current hotkeys available.
 
 # Hotkeys
 
+## On Foot
+
 -   F1 - Print Position, Rotation, and Heading in Console
--   F2 - Player List / Leaderboard
--   Left Alt - Toggle Interaction Mode
 -   E - Interact
 -   I - Inventory
 
@@ -26,13 +26,15 @@ description: All of the current hotkeys available.
 
 -   Up - Last Message
 -   Down - Next Message
--   Right - Autocomplete Command
+-   Tab - Autocomplete Command
 -   Escape - Exit Chat
 -   Enter - Send Chat Message
 -   T - Toggle Chat Box
+-   PageUp - Scroll Up
+-   PageDown - Scroll Down
 
 ## No Clip
 
--   Scroll Up - Slow Down
--   Scroll Down - Speed Up
+-   Scroll Up - Speed Up
+-   Scroll Down - Slow Down
 -   WASD - Move Camera

@@ -2,15 +2,23 @@
 description: Learn where to place mods for your server.
 ---
 
+# Using Mods with alt:V
+
+You should follow the [generic mod instructions here](https://docs.altv.mp/gta/articles/tutorials/index.html). However, you will need to read further about where to place them and the load order as it's slightly different with the Athena Framework.
+
 # Load Order
 
-You absolutely must put **core last** in your `server.cfg`.
+In your configuration(s) you should always be loading mods `FIRST`. Which means you should append mods before normal athena resources such as `core` and `webview`.
+
+Ensure you edit configurations in the `configs` folder.
 
 Example:
 
 ```
-resources: ["my-building-mod", "my-car-mod", "webserver","core"],
+resources: ["my-building-mod", "my-car-mod", "webview","core"],
 ```
+
+_It is highly recommended that if you are actively developing that you leave major MLOs off as it increases load time._
 
 # Where to Place Mods
 

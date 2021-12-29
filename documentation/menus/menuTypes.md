@@ -1,6 +1,5 @@
 ---
-description: >-
-  Understand the different types of menus available in Athena and what they are.
+description: Understand the different types of menus available in Athena and what they are.
 ---
 
 # Summary
