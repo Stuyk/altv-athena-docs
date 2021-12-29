@@ -11,7 +11,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 const attachable: IAttachable = {
     model: 'prop_tool_fireaxe',
     bone: 57005,

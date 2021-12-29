@@ -26,7 +26,7 @@ Locales must be written and present at the time of bootup.
 
 Inside of `locale.ts` in the `src/core/shared/locale` folder you'll find a bit of code for `locales`.
 
-```ts
+```typescript
 const locales: LocaleFormat = {
     en
     // Additional languages can be added here...
@@ -35,7 +35,7 @@ const locales: LocaleFormat = {
 
 You need to import your locale. Here is how I would import a Deutsch locale.
 
-```ts
+```typescript
 import de from './languages/de'; // Importing the English Locale
 
 const locales: LocaleFormat = {

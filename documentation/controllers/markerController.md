@@ -29,7 +29,7 @@ const uid = ServerMarkerController.append({
 
 _Keep in mind you should have a player reference to use this_
 
-```ts
+```typescript
 const uid = ServerMarkerController.addToPlayer(player, {
     pos: {x: 0, y: 0, z: 0},
     color: new alt.RGBA(255, 255, 255, 150),

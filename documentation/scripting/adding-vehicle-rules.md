@@ -10,7 +10,7 @@ They determine whether or not an action can be completed on a vehicle.
 
 ## Vehicle Rule Types
 
-```ts
+```typescript
 enum VEHICLE_RULES {
     ENTER = 'vehicle-enter',
     EXIT = 'vehicle-exit',
@@ -26,7 +26,7 @@ enum VEHICLE_RULES {
 
 _Remember you will need to import `VehicleSystem` and `VEHICLE_RULES` into your file_
 
-```ts
+```typescript
 // Define the rule and what rule to use.
 VehicleSystem.addCustomRule(VEHICLE_RULES.ENTER, (player, vehicle, { seat }) => {
     // Probably not a 'faction' vehicle.

@@ -24,7 +24,7 @@ const uid = WorldNotificationController.append({
 
 _Keep in mind you should have a player reference to use this_
 
-```ts
+```typescript
 const uid = WorldNotificationController.addToPlayer(player, {
     text: 'Hello World!',
     type: WORLD_NOTIFICATION_TYPE.ARROW_BOTTOM,

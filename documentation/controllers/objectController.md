@@ -16,7 +16,7 @@ Global Object(s) are defined as a type of object that everyone can see.
 
 All object(s) must have a unique identifier or a `uid` just in case they need to be removed later.
 
-```ts
+```typescript
 ServerObjectController.append({ uid: `test-object-1`, model: 'prop_ld_int_safe_01', pos });
 ```
 
@@ -24,7 +24,7 @@ ServerObjectController.append({ uid: `test-object-1`, model: 'prop_ld_int_safe_0
 
 Global Object(s) can easily be removed if you know the `uid` of that object.
 
-```ts
+```typescript
  ServerObjectController.remove('test-object-1')
 ```
 
@@ -32,7 +32,7 @@ Global Object(s) can easily be removed if you know the `uid` of that object.
 
 Local Object(s) are only for a single player to see. Remember that the `uid` is something you define to remove it later.
 
-```ts
+```typescript
 ServerObjectController.addToPlayer(player, { uid: `test-object-local-1`, model: 'prop_ld_int_safe_01', pos })
 ```
 
@@ -40,6 +40,6 @@ ServerObjectController.addToPlayer(player, { uid: `test-object-local-1`, model: 
 
 As long as you know the `uid` of the local object it can be removed.
 
-```ts        
+```typescript        
 ServerObjectController.removeFromPlayer(player, 'test-object-local-1');
 ```

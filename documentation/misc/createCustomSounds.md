@@ -37,7 +37,7 @@ Sounds should not last forever, and they should be used temporarily.
 
 Simply use the playerFuncs to call the name of your file. Remove `.ogg` from the audioName.
 
-```ts
+```typescript
 // Last parameter is volume. 0 - 1
 playerFuncs.emit.sound2D(player, 'unlock', 0.75);
 ```
@@ -48,7 +48,7 @@ Simply use the playerFuncs to call the name of your file. Remove `.ogg` from the
 
 You must pass either a player, or vehicle as the target location of the audio.
 
-```ts
+```typescript
 // Last parameter is volume. 0 - 1
 playerFuncs.emit.sound2D(player, 'unlock', player.vehicle);
 ```

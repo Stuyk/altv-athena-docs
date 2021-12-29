@@ -31,7 +31,7 @@ const uid = ServerBlipController.append({
 
 _Keep in mind you should have a player reference to use this_
 
-```ts
+```typescript
 const uid = ServerBlipController.addToPlayer(player, {
     sprite: 616,
     color: 5,

@@ -14,7 +14,7 @@ Wheel Menu's are exactly how they sound. It's a wheel with a bunch of items you 
 
 This example simply has an event where if an event is passed from server to client. It will open this menu.
 
-```ts
+```typescript
 import * as alt from 'alt-client';
 import { IWheelItem, WheelMenu } from '../utility/wheelMenu'; 
 // May not be a valid path. Use auto-import feature from your code editor.
@@ -38,7 +38,7 @@ alt.onServer('open:MyMenu', () => {
 
 # Nested Example
 
-```ts
+```typescript
 import * as alt from 'alt-client';
 import { IWheelItem, WheelMenu } from '../utility/wheelMenu'; 
 // May not be a valid path. Use auto-import feature from your code editor.

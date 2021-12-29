@@ -15,13 +15,13 @@ Permissions are a hard-coded bitwise enum. What does that mean?
 
 If you want a command to be accessible to admins only then you do the following:
 
-```ts
+```typescript
 PERMISSIONS.ADMIN
 ```
 
 If you want a command to be accessible to admins and moderators then you do the following:
 
-```ts
+```typescript
 PERMISSIONS.MODERATOR | PERMISSIONS.ADMIN
 ```
 

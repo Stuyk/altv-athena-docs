@@ -56,7 +56,7 @@ Inside of `src/core/plugins/imports.ts` is where you should import the `index` f
 
 In your `index` file you should register your plugin.
 
-```ts
+```typescript
 import * as alt from 'alt-server';
 import { PluginSystem } from '../../server/systems/plugins';
 

@@ -11,6 +11,6 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 playerFuncs.emit.createSpinner(player, { duration: 5000, text: 'Hello World!' });
 ```

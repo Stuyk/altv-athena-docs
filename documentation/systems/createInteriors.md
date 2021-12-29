@@ -13,7 +13,7 @@ There is currently just a single command to add a house.
 If you have a plugin or custom location where you want to add a bunch of houses to the Database. You can use the below example(s) to create two different interior types.
 
 ## Global Interior
-```ts
+```typescript
 await InteriorSystem.add({
     name: 'Diamond Resorts Casino',
     uid: 'diamond-resort-casino',
@@ -27,7 +27,7 @@ await InteriorSystem.add({
 
 ## House Interior
 
-```ts
+```typescript
 await InteriorSystem.add({
     name: 'Some Cool House',
     uid: 'some-cool-house',
@@ -50,7 +50,7 @@ _The above examples must use an async function to work_
 
 It will prompt you for information about the house.
 
-```ts
+```typescript
 /addhouse
 ```
 

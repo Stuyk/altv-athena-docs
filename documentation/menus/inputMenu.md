@@ -11,7 +11,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 function createMenu(player: alt.Player) {
     const menu: InputMenu = {
         title: 'Input Test',

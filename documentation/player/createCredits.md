@@ -11,7 +11,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 playerFuncs.emit.createCredits(player, {
     duration: 5000,
     role: 'Athena Creator',

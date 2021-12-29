@@ -11,7 +11,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 playerFuncs.emit.createErrorScreen(player, { duration: 5000, title: 'Test', text: 'Hello World!' });
 ```
 

@@ -25,7 +25,7 @@ This will create a ColShape where the player can press their interaction button 
 
 _Keep in mind that the paths of these files may vary._
 
-```ts
+```typescript
 import * as alt from 'alt-server';
 
 import { playerFuncs } from '../../server/extensions/Player';
@@ -54,7 +54,7 @@ This will remove an interaction and its associated ColShape.
 
 _Keep in mind that the paths of these files may vary._
 
-```ts
+```typescript
 import * as alt from 'alt-server';
 
 import { playerFuncs } from '../../server/extensions/Player';

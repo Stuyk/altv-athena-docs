@@ -28,7 +28,7 @@ PedController.append(ped);
 
 _Keep in mind you should have a player reference to use this_
 
-```ts
+```typescript
 const ped: IPed = {
     uid: `ped-${Math.floor(Math.random() * 500000)}`,
     model: 'u_f_m_casinocash_01',
@@ -44,7 +44,7 @@ PedController.addToPlayer(ped);
 
 # Play Animations for a Ped
 
-```ts        
+```typescript        
 let anim1: Animation = {
     dict: 'random@arrests@busted',
     name: 'idle_a',

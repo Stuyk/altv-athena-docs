@@ -24,13 +24,13 @@ The inventory is setup as a single array. The `slot` determines how the item is 
 
 So accessing individual items for a player is something like...
 
-```ts
+```typescript
 player.data.inventory[0]
 ```
 
 Here's what they may look like from a visual perspective.
 
-```ts
+```typescript
 [
     {
         name: 'Burger',
@@ -57,13 +57,13 @@ Index is where the item is placed inside of the array.
 
 If a function returns an index for an inventory item then it means you can get the item like...
 
-```ts
+```typescript
 player.data.inventory[index]
 ```
 
 If the function returns a slot for an inventory item. Then it means you need to get it like this...
 
-```ts
+```typescript
 const item = player.data.inventory.find(x => x.slot === someSlotNumber);
 ```
 
@@ -71,7 +71,7 @@ const item = player.data.inventory.find(x => x.slot === someSlotNumber);
 
 The inventory does not always save after each update. If you use any inventory functions you should be throwing a save and a sync immediately after performing any functions.
 
-```ts
+```typescript
 playerFuncs.save.field(player, 'inventory', player.data.inventory);
 playerFuncs.sync.inventory(player)
 ```
@@ -80,7 +80,7 @@ playerFuncs.sync.inventory(player)
 
 Because these objects can be rather complicated there is a simple function that does a deep clone of an object and ensuring that you're not modifying the original data. You should always deep clone an object before adding it to a player inventory to prevent data from referencing other inventories and such.
 
-```ts
+```typescript
 const item = deepCloneObject(originalItem) as Item;
 // Then add the item somewhere...
 ```
@@ -165,7 +165,7 @@ playerFuncs.sync.inventory(player)
 
 Depending on what you want to do with the player inventory there are a ton of ways to work with it. However, more often than not the most common use case for working with an inventory is finding an item and removing it. Which is what we'll be covering here.
 
-```ts
+```typescript
 function findPlayerBurgerItem(player: alt.Player) {
     const itemInfo = playerFuncs.inventory.isInInventory(player, { name: 'Burger' });
     if (!itemInfo) {

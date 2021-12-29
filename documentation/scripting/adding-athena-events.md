@@ -10,7 +10,7 @@ An Athena Event is a baked in event that gets called when specific Athena based 
 
 Inside of your `plugins` folder you can define them like this on server-side.
 
-```ts
+```typescript
 import * as alt from 'alt-server';
 import { ATHENA_EVENTS_PLAYER, ATHENA_EVENTS_VEHICLE } from '../../server/enums/athena';
 import { EventController } from '../../server/systems/athenaEvent';

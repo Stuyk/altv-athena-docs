@@ -14,7 +14,7 @@ Polygon ColShapes like this are generally considered expensive and should be use
 
 # Example
 
-```ts
+```typescript
 function generatePolygon() {
     const positions = [
         { x: -1498.1483154296875, y: -677.0752563476562, z: 28.048023223876953 },

@@ -14,7 +14,7 @@ This means that only certain accounts should be able to access certain commands 
 
 ### Unrestricted Command
 
-```ts
+```typescript
 function doSomething(player: alt.Player) {
     console.log('Someone did something');
 }
@@ -24,7 +24,7 @@ ChatController.addCommand('dosomething', '/dosomething - It does something?', PE
 
 ### Moderators Only Command
 
-```ts
+```typescript
 function doSomething(player: alt.Player) {
     console.log('Moderator did something');
 }
@@ -34,7 +34,7 @@ ChatController.addCommand('dosomething', '/dosomething - It does something?', PE
 
 ### Admins Only Command
 
-```ts
+```typescript
 function doSomething(player: alt.Player) {
     console.log('Admin did something');
 }
@@ -44,7 +44,7 @@ ChatController.addCommand('dosomething', '/dosomething - It does something?', PE
 
 ### Admins and Moderators
 
-```ts
+```typescript
 function doSomething(player: alt.Player) {
     console.log('Admin or Mod did something');
 }
@@ -56,7 +56,7 @@ ChatController.addCommand('dosomething', '/dosomething - It does something?', PE
 
 Permissions by default are currently set to the following:
 
-```ts
+```typescript
 export enum PERMISSIONS {
     NONE = 0,
     VIP = 1,
@@ -79,7 +79,7 @@ Permissions are bitwise meaning that they `MUST` be a certain number in order fo
 
 This is why I'm giving you an example to follow. Please ensure you follow this pattern.
 
-```ts
+```typescript
 export enum PERMISSIONS {
     NONE = 0,
     VIP = 1,

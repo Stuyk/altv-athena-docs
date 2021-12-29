@@ -18,7 +18,7 @@ What do I mean?
 
 Let's take this object for example:
 
-```ts
+```typescript
 {   
     _id: 'jklfejklwjfkl;ejw;alfjlewafewa',
     name: 'stuyk'
@@ -27,7 +27,7 @@ Let's take this object for example:
 
 I want to add a new field. I will now add it.
 
-```ts
+```typescript
 {
     _id: 'jklfejklwjfkl;ejw;alfjlewafewa',
     name: 'stuyk',

@@ -11,7 +11,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 playerFuncs.emit.createShard(player, {
     duration: 5000,
     title: '~r~Hello World!',

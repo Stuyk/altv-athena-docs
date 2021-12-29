@@ -40,12 +40,12 @@ After copying the template you should see something like... `template copy` as a
 Inside of `Template.vue` we are going to change the contents of one variable **immediately**. We're going to change the ComponentName.
 
 **Before**
-```ts
+```typescript
 const ComponentName = 'Template';
 ```
 
 **After**
-```ts
+```typescript
 const ComponentName = 'Test';
 ```
 
@@ -81,13 +81,13 @@ This is where we are going to import our new page and append it to the `componen
 
 Let's import your `test` folder and `Test.vue` page.
 
-```ts
+```typescript
 import Test from './test/Test.vue';
 ```
 
 Then we append it to your componentList.
 
-```ts
+```typescript
 const componentList = {
     Atm: shallowRef(Atm),
     CharacterCreator: shallowRef(CharacterCreator),
@@ -179,7 +179,7 @@ Now we just need to add the `method` called `someMethodName` so in your Vue temp
 
 We are going to create a custom function inside of it.
 
-```ts
+```typescript
 data() {
     return {
         increment = 0;
@@ -213,7 +213,7 @@ As we continue to press the button the value of `increment` will increase.
 
 To send an event to the `client` we use the following template inside of a method.
 
-```ts
+```typescript
 if ('alt' in window) {
     alt.emit('helloFromWebView');
 }
@@ -221,7 +221,7 @@ if ('alt' in window) {
 
 We can send additional arguments along with the event.
 
-```ts
+```typescript
 if ('alt' in window) {
     alt.emit('helloFromWebView', arg1, arg2, arg3);
 }
@@ -231,7 +231,7 @@ if ('alt' in window) {
 
 Receiving events should be done inside of the `mounted()` function in the Vue Template. What we need to do is bind an event name to a method.
 
-```ts
+```typescript
 data() {
     return {
         first: '',
@@ -284,7 +284,7 @@ Look at `src/core/client/startup.ts` for more information.
 
 Change the following variable inside your copied `template.ts`.
 
-```ts
+```typescript
 const PAGE_NAME = 'Template';
 ```
 

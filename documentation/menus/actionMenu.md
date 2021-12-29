@@ -24,7 +24,7 @@ _Accessible on Server Side_
 
 # Example
 
-```ts
+```typescript
 function showActionMenu(player: alt.Player) {
 // Create an action called facePalm that uses the Animation Interface.
     const facePalm: Action = {
