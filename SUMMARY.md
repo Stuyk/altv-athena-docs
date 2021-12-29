@@ -75,7 +75,9 @@
 - [Particle](documentation/player/particle.md)
 - [Progress Bar](documentation/player/progressBar.md)
 - [Shard](documentation/player/createShard.md)
+- [Sound](documentation/player/sound.md)
 - [Spinners](documentation/player/createSpinner.md)
+- [Task Timeline](documentation/player/taskTimeline.md)
 
 ## Custom WebViews
 
