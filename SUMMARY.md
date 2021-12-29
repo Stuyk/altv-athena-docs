@@ -54,6 +54,7 @@
 - [Interiors](documentation/systems/createInteriors.md)
 - [Inventory & Items](documentation/systems/inventory.md)
 - [Jobs](documentation/systems/addingJobs.md)
+- [Weather](documentation/systems/weather.md)
 
 ## Menus
 
