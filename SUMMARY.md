@@ -22,12 +22,12 @@
 
 ## Info
 
+-   [Admin](documentation/info/admin.md)
+-   [Commands](documentation/info/commands.md)
 -   [Configuration](documentation/info/configuration.md)
 -   [Console](documentation/info/console.md)
--   [Commands](documentation/info/commands.md)
--   [Hotkeys](documentation/info/hotkeys.md)
--   [Admin](documentation/info/admin.md)
 -   [Database](documentation/info/database.md)
+-   [Hotkeys](documentation/info/hotkeys.md)
 
 ## Glossary
 
@@ -52,23 +52,28 @@
 ## Systems
 
 - [Interiors](documentation/systems/createInteriors.md)
-- [Jobs](documentation/systems/addingJobs.md)
 - [Inventory & Items](documentation/systems/inventory.md)
+- [Jobs](documentation/systems/addingJobs.md)
 
 ## Menus
 
 - [Menu Types](documentation/menus/menuTypes.md)
 - [Action Menus](documentation/menus/actionMenu.md)
-- [Wheel Menu](documentation/menus/wheelMenu.md)
 - [Input Menu](documentation/menus/inputMenu.md)
+- [Wheel Menu](documentation/menus/wheelMenu.md)
 
 ## Player
 
+- [Animations](documentation/player/animation.md)
+- [Attach Objects](documentation/player/objectAttach.md)
 - [Credits](documentation/player/createCredits.md)
+- [Currency](documentation/player/currency.md)
 - [Error Screen](documentation/player/createErrorScreen.md)
+- [Message](documentation/player/message.md)
+- [Meta](documentation/player/meta.md)
+- [Notifications](documentation/player/notification.md)
 - [Shard](documentation/player/createShard.md)
 - [Spinners](documentation/player/createSpinner.md)
-- [Attach Objects](documentation/player/objectAttach.md)
 
 ## Custom WebViews
 
