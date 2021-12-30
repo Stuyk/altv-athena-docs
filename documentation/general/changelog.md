@@ -183,6 +183,16 @@ description: List of all the changes and current versions.
 + Added Job Checks for Vehicles
 + Added Item Registry
 + Fixed Storage in Vehicle Access
++ Added UIDs for Accounts (player.accountData.id)
++ Pizza Job
++ Mule Job
++ Physical Vehicle Keys
++ Fix Login Bug
++ Added player.hasFullySpawned
++ Fix Item REgistry Quantity
++ Made Nametags a Plugin
++ Fix Inventory Sizing Bug
++ Changed Package Info to v3.0.0
 ```
 
 ## 2.0.3
