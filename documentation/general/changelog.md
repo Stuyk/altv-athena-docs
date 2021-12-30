@@ -6,7 +6,7 @@ description: List of all the changes and current versions.
 
 ## 3.0.0
 
-```diff
+```
 + Began Interface Reworks
 + Added Lock Icon Toggle Server Wide
 + Added PED Streamer from Ravenous
@@ -197,7 +197,7 @@ description: List of all the changes and current versions.
 
 ## 2.0.3
 
-```diff
+```
 + Fix Dev Mode for Scripts
 + Added Interior System
 + Added Dimensions to Streamer
@@ -254,7 +254,7 @@ description: List of all the changes and current versions.
 
 ## 2.0.2
 
-```diff
+```
 + Added Custom Icons .ytd
 + Added Icons for HUD
 + Added Icon for Interaction
@@ -277,7 +277,7 @@ description: List of all the changes and current versions.
 
 ## 2.0.1
 
-```diff
+```
 + Add Client Console Command for 'timerinfo'
 + Prints the total amount of Timers and their Millisecond Interval
 + Bound all Intervals to Timer.createTimer to track Timers
@@ -317,7 +317,7 @@ description: List of all the changes and current versions.
 
 ## 2.0.0
 
-```diff
+```
 + New Keybind Interface for Custom Keybinds
 + Added Register Keybind
 + Applied Existing Keybinds to Register Keybind
@@ -395,7 +395,7 @@ description: List of all the changes and current versions.
 
 ## 1.8.2 - April 19 - May 14, 2021
 
-```diff
+```
 + Added Interior Architecture
 + Added Basic Interior Commands for Admins
 + Added /coords command for Admins
@@ -438,7 +438,7 @@ description: List of all the changes and current versions.
 
 ## 1.8.1 - April 8-18, 2021
 
-```diff
+```
 + Scaled Down Phone Slightly
 + Fixed Bad Alignment on Phone Icons
 + Added Timeout to Finish Authorization Button (3 Seconds)
@@ -500,7 +500,7 @@ description: List of all the changes and current versions.
 
 ## 1.8.0 - February 28-x, 2021
 
-```diff
+```
 + Increase Compilation Times
 + Rewrote Build Pipeline Into File
 + Added Separate Folder for 'addon-resources' for adding mods, etc.
@@ -527,14 +527,14 @@ description: List of all the changes and current versions.
 
 ## 1.7.1 - February 27, 2021
 
-```diff
+```
 + Fix Chat / Action Menu Bugs
 + Prevent Toolbar Actions while using Action Menu
 ```
 
 ## 1.7.0 - February 18-26, 2021
 
-```diff
+```
 + Added Fuel Pumps
 + Added Vehicle Fuel System
 + Added Vehicle Ownership Adding to Players
@@ -583,7 +583,7 @@ description: List of all the changes and current versions.
 
 ## 1.6.0 - February 1-10, 2021
 
-```diff
+```
 + Initial Job Framework
 + Food System
 + Water System
@@ -634,7 +634,7 @@ description: List of all the changes and current versions.
 
 ## 1.5.0 - January 28-31, 2021
 
-```diff
+```
 + Fix Bug with Inventory Equipment Restrictions
 + Added Whitelist
 + Added Whitelist for Discord Bot
@@ -657,7 +657,7 @@ description: List of all the changes and current versions.
 
 ## 1.4.0 - January 27, 2021
 
-```diff
+```
 + Upgraded to simplymongo 2.1.1 (Fixes Error in Console)
 + Added 'extra' folder for extending core without bugging out.
 + The 'extra' folder will allow you to import additional files that utilize core exports.
@@ -682,7 +682,7 @@ description: List of all the changes and current versions.
 
 ## 1.3.0 - January 23-26, 2021
 
-```diff
+```
 + Toolbar Support for Weapons
 + Keybinds 1-4 Now Support Weapon Swapping
 + Weapon Swap Sounds
@@ -698,7 +698,7 @@ description: List of all the changes and current versions.
 
 ## 1.2.0 - January 16-22, 2021
 
-```diff
+```
 + Inventory Design
 + Inventory Item Movement Architecture
 + Inventory Events
@@ -736,7 +736,7 @@ description: List of all the changes and current versions.
 
 ## 1.1.0 - January 12-15, 2021
 
-```diff
+```
 + Added Base Vehicle System / Controls
 + Fixed QT Bug when No User Local Storage for QT
 + Updated Ares for Portless Discord Authentication
@@ -777,7 +777,7 @@ description: List of all the changes and current versions.
 
 ## 1.0.9 - January 10, 2021
 
-```diff
+```
 + Potentially fixed buggy auth startup. No more under map bug.
 + Delayed quick token fetch for more consistent reconnect behavior.
 + Added Blip Interaction Handler
@@ -792,7 +792,7 @@ description: List of all the changes and current versions.
 
 ## 1.0.8 - January 6-8, 2021
 
-```diff
+```
 + Fixed Revive Command for Respawning
 + Fixed Health not being set on login
 + Fixed Armour not being set on login
@@ -817,7 +817,7 @@ description: List of all the changes and current versions.
 
 ## 1.0.6 - January 4-5, 2021
 
-```diff
+```
 + Added Missing Interiors
 + Leader Board / Player List
 + Created Player Specific Functions for Respawn Handling
@@ -831,7 +831,7 @@ description: List of all the changes and current versions.
 
 ## 1.0.5 - January 2 - 3, 2021
 
-```diff
+```
 + Add Respawn Handler
 + Fix Respawn Command
 + Add Basic Voice
@@ -841,7 +841,7 @@ description: List of all the changes and current versions.
 
 ## 1.0.1-4 - Janauary 1, 2021
 
-```diff
+```
 + Fix Nametag Distance
 + Fix Nametag bug for replacing undefined variable.
 + Fix Character and Account Linking
@@ -865,7 +865,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 30, 2020
 
-```diff
+```
 ~ Moved Prototypes to Seperate Files
 ~ Restructured Some Files / Folders
 + Fixed Permission Flag Checks
@@ -876,7 +876,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 29, 2020
 
-```diff
+```
 - Removed Gulp Dependency
 - Removed Yargs Dependency
 + Added Command Handler for Chat
@@ -887,7 +887,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 28, 2020
 
-```diff
+```
 + Added Chat
 + Chat View
 + Configuration for Distance for Chat
@@ -900,7 +900,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 27, 2020
 
-```diff
+```
 ~ Expanded Ares Service
 ~ Fixed Bad Reconnect Issues
 + Introduced DEV_ID to '.env'. Put your Discord ID for quick local development / logins.
@@ -913,7 +913,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 26, 2020
 
-```diff
+```
 ~ Fixed Rotation for New Character and Character Select
 + Finished Character Editor Design Updates
 + Character Creator now TPosing
@@ -924,7 +924,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 24, 2020
 
-```diff
+```
 - Removed Login View
 - Removed Express Server
 - Removed Discord Developer App Need
@@ -936,7 +936,7 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - December 21, 2020
 
-```diff
+```
 ~ Fixed by replacing alt.loadModel
 ~ Fixed by replacing native.setPlayerModel
 + Refactored Characters Interface
@@ -950,13 +950,13 @@ description: List of all the changes and current versions.
 
 ## 0.0.0 - October - December, 2020
 
-```diff
+```
 - Realized I was burnt out.
 ```
 
 ## 0.0.0 - August - October 2020
 
-```diff
+```
 + oAuth2 Service
 + View Extensions
 + Player Extensions
