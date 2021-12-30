@@ -10,6 +10,11 @@ Create a simple particle emit that displays for the current player or all player
 
 [Particle List Vespura](https://vespura.com/fivem/particle-list/)
 
+Example in-game
+
+![](https://thumbs.gfycat.com/ElasticSinfulGosling-size_restricted.gif)
+
+
 _Accessible on Server Side_
 
 # Example

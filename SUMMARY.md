@@ -53,6 +53,7 @@
 
 - [Interiors](documentation/systems/createInteriors.md)
 - [Inventory & Items](documentation/systems/inventory.md)
+- [Inventory Rules](documentation/systems/inventoryRules.md)
 - [Jobs](documentation/systems/addingJobs.md)
 - [Time](documentation/systems/time.md)
 - [Weather](documentation/systems/weather.md)
