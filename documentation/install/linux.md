@@ -5,6 +5,49 @@ description: >-
 
 # Linux
 
+Linux installation should be using Ubuntu 18.04 or greater. The author of this documentation has used Ubuntu 18.04 without any issues.
+
+# Table of Contents
+
+- [Linux](#linux)
+- [Table of Contents](#table-of-contents)
+- [Dependencies](#dependencies)
+  - [GIT](#git)
+  - [CURL](#curl)
+  - [wget](#wget)
+  - [UFW](#ufw)
+  - [NodeJS 16+ through NVM](#nodejs-16-through-nvm)
+    - [Uninstall Older Versions*](#uninstall-older-versions)
+    - [Install Latest Version of NVM](#install-latest-version-of-nvm)
+  - [MongoDB](#mongodb)
+  - [libatomic1](#libatomic1)
+  - [Create a Github Account](#create-a-github-account)
+- [Setup SSH Key](#setup-ssh-key)
+  - [Create the SSH Key](#create-the-ssh-key)
+  - [Start ssh-agent](#start-ssh-agent)
+  - [Add the SSH Key](#add-the-ssh-key)
+  - [Add the SSH Key to Github](#add-the-ssh-key-to-github)
+- [Port Forwarding](#port-forwarding)
+  - [UFW Instructions](#ufw-instructions)
+- [Setup Private Repo](#setup-private-repo)
+  - [Set Private Repo Main Branch to Master](#set-private-repo-main-branch-to-master)
+  - [Download from Private Repo](#download-from-private-repo)
+  - [Enter the Directory](#enter-the-directory)
+  - [Add Upstream](#add-upstream)
+- [Installing Dependencies](#installing-dependencies)
+- [Installing Server Files](#installing-server-files)
+- [License Key Activation](#license-key-activation)
+- [Starting the Server](#starting-the-server)
+  - [Update the server.cfg](#update-the-servercfg)
+  - [Production Mode](#production-mode)
+- [Checking Ports](#checking-ports)
+- [Connecting](#connecting)
+  - [What IP to use?](#what-ip-to-use)
+- [Installing Mods](#installing-mods)
+  - [Where to Install Mods](#where-to-install-mods)
+  - [Updating Configurations](#updating-configurations)
+- [Successful Installation](#successful-installation)
+
 
 # Dependencies
 
@@ -46,11 +89,28 @@ sudo apt-get install ufw
 
 Grab at least version 16+ for NodeJS through nvm.
 
+### Uninstall Older Versions*
+
+This step only applies if you installed NVM in the past.
+
+```sh
+nvm uninstall OLD_VERSION_HERE
+```
+
+### Install Latest Version of NVM
+
+Install the NVM script for selecting NodeJS versions.
+
 ```sh
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash \
     && export NVM_DIR="$HOME/.nvm" \
     && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
     && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+```sh
+nvm install 16
+nvm use 16
 ```
 
 ## MongoDB
