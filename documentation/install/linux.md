@@ -282,7 +282,7 @@ cd <your_repo_name>
 Add the upstream of the original athena repository.
 
 ```bash
-git remote add upstream git@github.com:Stuyk/altv-athena.git
+git remote add upstream https://github.com/Stuyk/altv-athena
 git remote set-url --push upstream DISABLE
 ```
 
