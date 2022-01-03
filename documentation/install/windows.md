@@ -338,6 +338,12 @@ npm run devtest
 
 This is the mode you should use when you want to work on Vue interfaces, and have very fast reconnections to your server. Limited to 1 user.
 
+**THIS ONLY WORKS IF THE SERVER + GAME ARE RUNNING ON SAME MACHINE**
+
+**THIS WILL NOT WORK FOR REMOTE SERVERS**
+
+This is the fastest way to develop your game mode and requires the least amount of compile time to test things.
+
 Enter the following in a terminal:
 
 ```
