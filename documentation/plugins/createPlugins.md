@@ -4,16 +4,6 @@ description: Learn to Create Plugins
 
 # Learn to Create Plugins
 
-**HEY LISTEN!**
-
-**THIS DOCUMENT TARGETS PLUGINS FOR 3.0.8+**
-
-**THIS DOCUMENT TARGETS PLUGINS FOR 3.0.8+**
-
-**THIS DOCUMENT TARGETS PLUGINS FOR 3.0.8+**
-
-**HEY LISTEN!**
-
 Plugins in the Athena Framework are made in a specific way. Meaning, that following this general structure will help you create robust plugins without touching the core of the framework.
 
 It is important that when a plugin is created that is does not adjust the core of the Athena Framework. This ensures that compatability is future-proof and additional updates to the plugin can be made without over complicating it.
@@ -34,19 +24,25 @@ It consists of several folders inside your main folder.
   * This should be shared between server, client, and webview
 * webview
   * This is a WebView Page you want to inject
+  * DOES NOT SUPPORT IMAGES, SOUNDS, ETC. THEY BELONG IN THE `src-webviews/public` folder
 
 ```
 src/core/plugins/core-example
   ├───client
-  │       index.ts
-  │
+  │   │   index.ts
+  |   │
+  │   └───src  
+  │       │   file1.ts
+  │       │   file2.ts
+  │       │   file3.ts
+  |
   ├───server
   │   │   index.ts
   │   │
   │   └───src
-  │           file1.ts
-  │           file2.ts
-  │           file3.ts
+  │       │   file1.ts
+  │       │   file2.ts
+  │       │   file3.ts
   │
   ├───shared
   │   │   file1.ts
@@ -72,9 +68,13 @@ Rules for Files and Folder(s)
   - ie. `mainDoorController.ts`
 - Plugins should use their respective folders for imports
   - Server: `src/core/plugins/example-plugin/server`
+    - The main import file for the plugin should be called `index.ts`.
   - Client: `src/core/plugins/example-plugin/client`
+    - The main import file for the plugin should be called `index.ts`.
   - Shared: `src/core/plugins/example-plugin/shared`
   - WebView: `src/core/plugins/example-plugin/webview`
+    - There must be a main `*.vue` file in this folder.
+    - Keep all components and additional vue files in subfolders.
 - Entry file for a Plugin should be `index.ts`
   - This applies to both `client` and `server`.
 
@@ -95,71 +95,6 @@ PluginSystem.registerPlugin(PLUGIN_NAME, () => {
     alt.log(`~lg~${PLUGIN_NAME} was Loaded`);
 });
 ```
-
-
-## Register a Plugin WebView
-
-Inside of `src/core/plugins/athena/webview/imports.ts` 
-
-
-## Importing Plugins
-
-You can import plugins for `client` and `server` by navigating to their respective `imports.ts` files.
-
-### Client
-
-```
-src/core/plugins/athena/client/imports.ts
-```
-
-Each of these files should have import references to other `index` files for other plugins. Simply add the `index` file for your plugin and it will be imported.
-
-#### Example
-
-```ts
-import '../../example-plugin/client/index';
-```
-
-### Server
-
-```
-src/core/plugins/athena/server/imports.ts
-```
-
-Each of these files should have import references to other `index` files for other plugins. Simply add the `index` file for your plugin and it will be imported.
-
-#### Example
-
-```ts
-import '../../example-plugin/server/index';
-```
-
-### WebView
-
-```
-src/core/plugins/athena/webview/imports.ts
-```
-
-Inside of the imports for webview you'll need to import the `vue` file. The `vue` file should then have a `shallowRef` of its import added to the object.
-
-#### Example
-
-```ts
-import Example from '../../example-plugin/webview/Example.vue';
-
-export const PLUGIN_IMPORTS = {
-    Example: shallowRef(Example),
-};
-```
-
-_If there are errors on import, do not worry it will still compile._
-
-
-## Register a Shared Plugin
-
-Plugins that use the shared folder can be used on both client-side and server-side. However, the content inside of these files has to be accessible on both client and server.
-
-This means that you cannot use `alt.Player`, `alt.Vehicle`, etc. They're mostly good for creating event names, enums, etc. that will be used on both server-side and client-side.
 
 ## Learn from Example
 

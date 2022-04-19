@@ -35,6 +35,7 @@
 
 ## Plugins
 
+- [Load Plugins](documentation/plugins/loadPlugins.md)
 - [Create Plugins](documentation/plugins/createPlugins.md)
 - [Mods](documentation/plugins/addMods.md)
 

@@ -192,7 +192,7 @@ You can check that out using the alt:V client at [https://altstats.net/server/50
     -   Create Interiors Easily
     -   Specify Different Interior Types (House, Faction, System)
     -   Object Streaming for Interiors
--   Faction System
+-   Faction System (Currently Being Reworked)
     -   Create Factions
     -   Create Custom Ranks for Factions
     -   Add Members to Factions
