@@ -49,7 +49,7 @@ Usage - One command with one handler function.
 
 ```typescript
 class CommandHolder {
-    @command('/test', '/test [arg1] [arg2] - Prints some args', PERMISSIONS.NONE)
+    @command('test', '/test [arg1] [arg2] - Prints some args', PERMISSIONS.NONE)
     static doSomething(player: alt.Player, arg1: string, arg2: string) {
         console.log(arg1, arg2);
     }
@@ -62,7 +62,7 @@ Usage - Multiple commands with one handler function.
 
 ```typescript
 class CommandHolder {
-    @command(['/test', '/testagain'], '/test [arg1] [arg2] - Prints some args', PERMISSIONS.NONE)
+    @command(['test', 'testagain'], '/test [arg1] [arg2] - Prints some args', PERMISSIONS.NONE)
     static doSomething(player: alt.Player, arg1: string, arg2: string) {
         console.log(arg1, arg2);
     }
