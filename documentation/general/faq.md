@@ -7,25 +7,17 @@ description: Frequently asked questions.
 - [FAQ](#faq)
   - [What is Athena?](#what-is-athena)
   - [Can non-developers use this?](#can-non-developers-use-this)
-  - [What is included?](#what-is-included)
   - [How often is Athena Updated?](#how-often-is-athena-updated)
-  - [Lifetime License?](#lifetime-license)
-  - [What happens after Athena stops development?](#what-happens-after-athena-stops-development)
   - [Server Specification Recommendations](#server-specification-recommendations)
   - [MongoDB?](#mongodb)
   - [Can I use MySQL?](#can-i-use-mysql)
   - [How do I use a CDN?](#how-do-i-use-a-cdn)
   - [Downloads are super slow?](#downloads-are-super-slow)
-  - [Do you provide custom support / scripts?](#do-you-provide-custom-support--scripts)
-  - [Will all features be free?](#will-all-features-be-free)
-  - [May I share my license?](#may-i-share-my-license)
   - [Theoretical Player Limitations?](#theoretical-player-limitations)
-  - [Cannot Interact with Anything](#cannot-interact-with-anything)
   - [What Version am I using?](#what-version-am-i-using)
   - [Interfaces are sometimes laggy or delayed.](#interfaces-are-sometimes-laggy-or-delayed)
   - [What server hosts do your recommend for deployment?](#what-server-hosts-do-your-recommend-for-deployment)
   - [How do I switch branches?](#how-do-i-switch-branches)
-  - [What about mods?](#what-about-mods)
   - [What is Ares?](#what-is-ares)
   - [Do I have to use Discord?](#do-i-have-to-use-discord)
 
@@ -37,33 +29,11 @@ Athena is a Roleplay Framework that lets developers build out their custom Rolep
 
 Yes, but also no. It is highly recommended that you at least have a small understanding of JavaScript to work with TypeScript. This Framework is recommended for developers, and modders who like to tweak and create code.
 
-## What is included?
-
-When you purchase an Athena License Key you will get access to the following:
-
-* Boot the Script
-* Documentation
-* Discord Support
-* Assistance with Installation, and Booting
-* General Script Support
-  * No this does not mean the author will write scripts for you.
-* On-going Support for Bug Fixes in Core Features
-
 ## How often is Athena Updated?
 
 Athena is updated at a very frequent rate. Meaning that the latest commits are always public and can always be pulled down.
 
 However, the end user is responsible for pulling these changes and maintaining their private fork of this repository.
-
-## Lifetime License?
-
-No, we only offer a subscription based roleplay script as this is a solid way for us to continue pushing updates for each change that GTA 5 receives. Paying for Athena means you are receiving support for upcoming changes, performance improvements, and new features.
-
-Development is a rapid environment with never-ending changes.
-
-## What happens after Athena stops development?
-
-The script becomes fully open source and the bootup instructions are released publicly for everyone to gain access. However, this project will likely see at least 5 years of on-going development, performance improvements, and pushing for increased ease-of-use.
 
 ## Server Specification Recommendations
 
@@ -103,18 +73,6 @@ If you are running a production server without a CDN it is highly recommended th
 
 https://wiki.altv.mp/wiki/Tutorial:Setup_CDN
 
-## Do you provide custom support / scripts?
-
-I provide basic support for getting it running. However, I will not be providing support for writing most scripts. Users may tap into the shared knowledge in the Athena Discord to get some guidance on how to create or construct new scripts.
-
-## Will all features be free?
-
-The core features, items, etc. will always come with Athena. However, the data to construct complex jobs in the eventual Job Framework will likely become addons that you can get for your server. Feel free to write your own jobs though.
-
-## May I share my license?
-
-Licenses are currently limited to 5 IP\(s\) at any given time. If the number of IP\(s\) is exceeded you will have to wait until Ares is rebooted to get a reset on usage.
-
 ## Theoretical Player Limitations?
 
 The Athena framework has not been tested with high player counts yet. However, compared to the old code of O:RP and the steps I've taken to ensure that client's get the best performance they can. I do believe Athena is capable of handling at least 600 players at a time. However, this will only apply to the vanilla version of Athena which means not using any additional mods.
@@ -124,11 +82,6 @@ For those who are looking to host a voice server you will likely end up hitting 
 It's recommended you split your server into two groups and provided the same features and functionality on both servers if you have a larger player base.
 
 Obviously, you should not be running these servers on the same infrastructre.
-
-## Cannot Interact with Anything
-
-Make sure you press 'left alt' before you do anything. This turn son a bunch of loops to help with interacting and figuring out what the player needs to do. This is purposely left off to ensure client's get the highest performacne while playing with the Athena Framework.
-
 
 ## What Version am I using?
 
@@ -152,10 +105,6 @@ git pull origin <branch_name>
 ```
 
 If you made local changes you will need to either commit them or stash them before changing branches.
-
-## What about mods?
-
-alt:V actively supports mods. However, Athena is built with vanilla GTA:V in mind and will not be adding additional mods and data unless it benefits the gamemode. Mods are supported, there just will not be supported provided by the Athena main developer.
 
 ## What is Ares?
 

@@ -35,7 +35,6 @@ Read them carefully, read them twice, and double check your steps.
   - [Add Upstream](#add-upstream)
 - [Installing Dependencies](#installing-dependencies)
 - [Installing Server Files](#installing-server-files)
-- [License Key Activation](#license-key-activation)
 - [Starting the Server](#starting-the-server)
   - [Update the server.cfg](#update-the-servercfg)
   - [Production Mode](#production-mode)
@@ -44,9 +43,6 @@ Read them carefully, read them twice, and double check your steps.
 - [Checking Ports](#checking-ports)
 - [Connecting](#connecting)
   - [What IP to use?](#what-ip-to-use)
-- [Installing Mods](#installing-mods)
-  - [Where to Install Mods](#where-to-install-mods)
-  - [Updating Configurations](#updating-configurations)
 - [Successful Installation](#successful-installation)
 
 # Dependencies
@@ -63,7 +59,7 @@ Grab the latest version of GIT from the official website.
 
 Grab the latest version of NodeJS from the official website.
 
-[Download NodeJS 16+](https://nodejs.org/en/download/)
+[Download NodeJS 17+](https://nodejs.org/en/download/)
 
 ## MongoDB
 
@@ -262,36 +258,6 @@ From this point forward you can simply run this `npm` command to update dependen
 npm run update
 ```
 
-# License Key Activation
-
-The license key is unique to your Gumroad Transaction. The license key should be kept a secret.
-
-The [Official alt:V Athena Discord](https://discord.gg/pZvbJmKN8Y) will allow you to manage your license key and IP(s) which can use it through the Athena Key Manager Bot.
-
-Open a Private Message with `Athena Key Manager Bot` and type `!help`.
-
-![](https://thumbs.gfycat.com/HandmadeRegularIsabellinewheatear-size_restricted.gif)
-
-_This should open a private message window with the Key Manager_
-
-Send the bot the following information:
-
-```
-!refresh your_gumroad_email your_license_key
-```
-
-After binding the license you can append the IP of your server, computer, etc. to the license key. Please make sure you actually know what your own computer's IP is. **It is not** `127.0.0.1` and **it is not** `192.168.1.1`.
-
-Google -> `What is my IP?`
-
-Send the bot the following information:
-
-```
-!append your_license_key your_server_ip
-```
-
-_You can have 5 IPs which can be removed or added at any time._
-
 # Starting the Server
 
 **Hey Listen,** normally you start the server through altv-server.exe but **we do not do that with Athena**. There are other programs that run along-side Athena that allow it to function. You will need to run one of the commands below.
@@ -365,24 +331,6 @@ Remember to get the [https://altv.mp/](https://altv.mp) client and connect.
 If you are running this on your local machine you should connect to `127.0.0.1:7788`.
 
 If you are running this on an external server you should connect to the server's IP address.
-
-# Installing Mods
-
-You should refer to the official [alt:V Docs](https://docs.altv.mp/) on installing modifications.
-
-However, there is one thing that is different.
-
-## Where to Install Mods
-
-You should **always** install modifications in the `src` folder. 
-
-They should be isolated in their own folders.
-
-## Updating Configurations
-
-When you add a modification you must append it to your `configs`.
-
-You should always load your modifications before you load `core` or `webviews`.
 
 # Successful Installation
 
