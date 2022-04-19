@@ -3,15 +3,9 @@
 ## Info
 
 -   [Introduction](README.md)
--   [Changelog](documentation/general/changelog.md)
--   [FAQ](documentation/general/faq.md)
--   [Buy License](https://gumroad.com/l/SKpPN)
-
-
-## Links
-
--   [alt:V Official](https://altv.mp/)
+-   [Support](https://patreon.com/stuyk)
 -   [Athena Discord](https://discord.gg/pZvbJmKN8Y)
+-   [FAQ](documentation/general/faq.md)
 
 ## Installation
 
