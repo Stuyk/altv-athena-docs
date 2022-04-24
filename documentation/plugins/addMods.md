@@ -10,9 +10,24 @@ alt:V has [general modding instructions on how to stream files, mlos, ymaps, etc
 
 After following those general instructions read further below on where to put your mods.
 
-## Where Load Mods?
+## Where to Load Mods?
 
-Folder Path: `src/yourmod`
+```
+📁 altv-athena/
+    L 📁 mods/
+        |- 📁 a-mod/
+        |    |- stream.cfg
+        |    |- resource.cfg
+        |    L 📁 stream/
+        |- 📁 some-mod/
+        |    |- stream.cfg
+        |    |- resource.cfg
+        |    L 📁 stream/
+        L 📁 whatever-mod/
+            |- stream.cfg
+            |- resource.cfg
+            L 📁 stream/
+```
 
 ## Add to server.cfg
 
@@ -35,20 +50,20 @@ Ensure you edit configurations in the `configs` folder.
 Example:
 
 ```ts
-resources: ["my-building-mod", "my-car-mod", "core"],
+resources: ["a-mod", "some-mod", "whatever-mod", "webviews", "core"],
 ```
 
 _It is highly recommended that if you are actively developing that you leave major MLOs off as it increases load time._
 
 ## Where to Place Mods
 
-Mods are a bit tricky with alt:V but the alt:V Discord should always be your \#1 place to ask for modding support and ask general questions. In those regards Athena copies all files from the `./src` directory into the `./resources` directory.
+Mods are a bit tricky with alt:V but the alt:V Discord should always be your \#1 place to ask for modding support and ask general questions.
 
 **DO NOT PLACE ANYTHING IN THE `./resources` FOLDER**
 
 Anything inside of `./resources` will always be deleted when you compile or start this game mode.
 
-Anything inside of the `./src` folder that is not a `.ts` file will be copied over to `resources` after compilation.
+Anything inside of the `./mods` folder will be loaded at runtime.
 
 This is necessary to ensure a clean build is created for each deployment.
 
@@ -56,7 +71,7 @@ This is necessary to ensure a clean build is created for each deployment.
 
 **Folder Path**
 
-`./src/hospital`
+`./mods/hospital`
 
 **Resource Name**
 
