@@ -2,7 +2,7 @@
 description: Saving player data, new data, etc.
 ---
 
-# playerFuncs.save
+# Athena.player.save
 
 There are a few things that are automatically saved to the database every `5 seconds` but there are certain things that are obviously not saved all the time.
 
@@ -45,7 +45,7 @@ You should only add a save injection `once`. It will automatically call the call
 **Example**
 
 ```typescript
-playerFuncs.save.addSaveInjection((player: alt.Player) => {
+Athena.player.save.addSaveInjection((player: alt.Player) => {
     return { hello: 'world' };
 });
 ```
@@ -73,7 +73,7 @@ declare module 'alt-server' {
 **The Conditional Save**
 
 ```typescript
-playerFuncs.save.field(player, 'someNewValue', player.data.someNewValue);
+Athena.player.save.field(player, 'someNewValue', player.data.someNewValue);
 ```
 
 _Used for single key and value_
@@ -81,7 +81,7 @@ _Used for single key and value_
 OR
 
 ```typescript
-playerFuncs.save.partial(player, { someNewValue: player.data.someNewValue });
+Athena.player.save.partial(player, { someNewValue: player.data.someNewValue });
 ```
 
 _Used for multiple keys and values_

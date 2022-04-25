@@ -2,7 +2,7 @@
 description: Send a GTA:V Notification to a Player
 ---
 
-# playerFuncs.emit.notification
+# Athena.player.emit.notification
 
 This is the way to send a simple notification built in to GTA:V to a player.
 
@@ -12,7 +12,7 @@ This is the way to send a simple notification built in to GTA:V to a player.
 Sending a notification can be done like this...
 
 ```typescript
-playerFuncs.emit.notification(player, '~g~Hello There!');
+Athena.player.emit.notification(player, '~g~Hello There!');
 ```
 
 ## Colors and Formatting

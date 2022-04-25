@@ -2,7 +2,7 @@
 description: Meta lets you easily sync single-sided data for players.
 ---
 
-# playerFuncs.emit.meta
+# Athena.player.emit.meta
 
 There may be a use case where you just need a single player to know about a variable on client-side. Let's say their own bank balance for instance.
 
@@ -13,7 +13,7 @@ You want the player to know their balance but it's not important for other playe
 Setting a meta can be done like this...
 
 ```typescript
-playerFuncs.emit.meta(player, 'bank', 500);
+Athena.player.emit.meta(player, 'bank', 500);
 ```
 
 ## Client Usage

@@ -17,7 +17,7 @@ Marker List(s):
 # Example - World
 
 ```typescript
-const uid = ServerMarkerController.append({
+const uid = Athena.controllers.marker.append({
     pos: {x: 0, y: 0, z: 0},
     color: new alt.RGBA(255, 255, 255, 150),
     type: MARKER_TYPE.CYLINDER,
@@ -30,7 +30,7 @@ const uid = ServerMarkerController.append({
 _Keep in mind you should have a player reference to use this_
 
 ```typescript
-const uid = ServerMarkerController.addToPlayer(player, {
+const uid = Athena.controllers.marker.addToPlayer(player, {
     pos: {x: 0, y: 0, z: 0},
     color: new alt.RGBA(255, 255, 255, 150),
     type: MARKER_TYPE.CYLINDER,
@@ -43,6 +43,6 @@ alt.setTimeout(() => {
         return;
     }
 
-    ServerMarkerController.removeFromPlayer(player, uid);
+    Athena.controllers.marker.removeFromPlayer(player, uid);
 }, 5000);
 ```

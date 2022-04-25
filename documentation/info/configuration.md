@@ -10,7 +10,11 @@ There is only so many configuration options that can be exported and tweaked. Ho
 
 The main configuration can be found in `src/core/server/athena/main.ts`
 
-## Where is Server Configuration?
+## Where is Server Configuration (server.cfg)?
 
 The server configuration can be found in `configs/`
+
+## Where are Locales?
+
+They're usually in `shared` folders for individual plugins as well as the core.
 

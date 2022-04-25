@@ -17,7 +17,7 @@ Global Object(s) are defined as a type of object that everyone can see.
 All object(s) must have a unique identifier or a `uid` just in case they need to be removed later.
 
 ```typescript
-ServerObjectController.append({ uid: `test-object-1`, model: 'prop_ld_int_safe_01', pos });
+Athena.controllers.object.append({ uid: `test-object-1`, model: 'prop_ld_int_safe_01', pos });
 ```
 
 # Removing a Global Object
@@ -25,7 +25,7 @@ ServerObjectController.append({ uid: `test-object-1`, model: 'prop_ld_int_safe_0
 Global Object(s) can easily be removed if you know the `uid` of that object.
 
 ```typescript
- ServerObjectController.remove('test-object-1')
+ Athena.controllers.object.remove('test-object-1')
 ```
 
 # Adding a Local Object to a Player
@@ -33,7 +33,7 @@ Global Object(s) can easily be removed if you know the `uid` of that object.
 Local Object(s) are only for a single player to see. Remember that the `uid` is something you define to remove it later.
 
 ```typescript
-ServerObjectController.addToPlayer(player, { uid: `test-object-local-1`, model: 'prop_ld_int_safe_01', pos })
+Athena.controllers.object.addToPlayer(player, { uid: `test-object-local-1`, model: 'prop_ld_int_safe_01', pos })
 ```
 
 # Removing a Local Object from a Player
@@ -41,5 +41,5 @@ ServerObjectController.addToPlayer(player, { uid: `test-object-local-1`, model: 
 As long as you know the `uid` of the local object it can be removed.
 
 ```typescript        
-ServerObjectController.removeFromPlayer(player, 'test-object-local-1');
+Athena.controllers.object.removeFromPlayer(player, 'test-object-local-1');
 ```

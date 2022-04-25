@@ -2,7 +2,7 @@
 description: Playing ped natives in a specific order.
 ---
 
-# playerFuncs.emit.taskTimeline
+# Athena.player.emit.taskTimeline
 
 Task timelines can be incredibly useful but they are also very limited in functionality. They basically allow you to override a player's inputs and make them do something specific with natives on client-side.
 
@@ -50,7 +50,7 @@ const tasks: Array<Task> = [
     },
 ];
 
-playerFuncs.emit.taskTimeline(player, tasks);
+Athena.player.emit.taskTimeline(player, tasks);
 ```
 
 _openSpot is a pre-defined parameter_

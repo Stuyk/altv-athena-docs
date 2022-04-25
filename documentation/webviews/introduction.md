@@ -30,8 +30,10 @@ Install this extension in VSCode
 It's quite easy to start our Vue interfaces in Development mode we only need to run a single command.
 
 ```
-npm run dev
+npm run vue-dev
 ```
+
+You can also run `npm run dev` which will turn on the vue server in the background while you have your server running. 
 
 ![](https://i.imgur.com/pjOQ6Ed.png)
 

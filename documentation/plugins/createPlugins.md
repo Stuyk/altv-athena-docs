@@ -8,7 +8,7 @@ Plugins in the Athena Framework are made in a specific way. Meaning, that follow
 
 It is important that when a plugin is created that is does not adjust the core of the Athena Framework. This ensures that compatability is future-proof and additional updates to the plugin can be made without over complicating it.
 
-### Structure
+## Structure
 
 All plugins should be placed inside the `src/core/plugins` folder.
 
@@ -28,6 +28,7 @@ It consists of several folders inside your main folder.
 
 ```
 src/core/plugins/core-example
+  |───dependencies.json
   ├───client
   │   │   index.ts
   |   │
@@ -79,6 +80,25 @@ Rules for Files and Folder(s)
   - This applies to both `client` and `server`.
 
 It is up to you as the plugin creator to provide `GOOD` instruction(s) on installation and removal of the plugin.
+
+### Dependencies
+
+If you have server-side dependencies for an npm package you can create a `dependencies.json` in the root of your plugin structure to auto-install dependencies for an end-user.
+
+```json
+{
+    "dependencies": [
+      "discord.js@latest"
+    ],
+    "devDependencies": [
+      "glob"
+    ]
+}
+```
+
+Dependencies in `devDependencies` will not be installed during production mode of the server. Meaning if you want to use an npm package in the game mode you should put it in dependencies.
+
+_Example dependencies.json_
 
 ## Registering a Server Plugin
 

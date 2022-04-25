@@ -3,7 +3,7 @@ description: >-
     Create a simple full-screen text shard.
 ---
 
-# playerFuncs.emit.createShard
+# Athena.player.emit.createShard
 
 Create a simple full-screen text shard.
 
@@ -12,7 +12,7 @@ _Accessible on Server Side_
 # Example
 
 ```typescript
-playerFuncs.emit.createShard(player, {
+Athena.player.emit.createShard(player, {
     duration: 5000,
     title: '~r~Hello World!',
     text: '~y~Shards are pretty neat sometimes.',

@@ -4,10 +4,8 @@ Writing your first page can be a bit confusing but this tutorial should cover th
 
 - [Your First Page](#your-first-page)
   - [Copy the Template](#copy-the-template)
-  - [Rename the Template](#rename-the-template)
-  - [Open Template.vue](#open-templatevue)
-  - [Rename Template.vue](#rename-templatevue)
-  - [Adding the Page](#adding-the-page)
+  - [Create Template.vue](#create-templatevue)
+  - [Turn on Developer Mode for Webviews](#turn-on-developer-mode-for-webviews)
   - [Writing the HTML](#writing-the-html)
   - [Creating Clickable Things](#creating-clickable-things)
   - [How to Send Events](#how-to-send-events)
@@ -20,94 +18,24 @@ Writing your first page can be a bit confusing but this tutorial should cover th
 Let's start off by navigating to the following directory:
 
 ```
-src-webviews/src/pages/template
+src/core/plugins
 ```
 
-Copy this folder and paste it in `pages`.
+Create a folder called `test`.
 
-This can be done by right-clicking the `template` folder and selecting copy. Then right-click on `pages` and select paste.
+Inside of that folder create another folder called `webview`.
 
 _You may need to shut down `npm run vue-dev` to get this to work as well as the server._
 
-## Rename the Template
+## Create Template.vue
 
-After copying the template you should see something like... `template copy` as a folder. You should rename this to whatever you want your folder to be named. In this example our folder name will be `test`.
+[Visit this website](https://github.com/Stuyk/altv-athena-plugin-template/blob/main/webview/ExamplePlugin.vue) and copy the raw code into `Template.vue`.
 
-![](https://i.imgur.com/oVSwOA8.png)
+## Turn on Developer Mode for Webviews
 
-## Open Template.vue
+In the console type `npm run vue-dev`. It will open a vue development server. Navigate to `https://localhost:3000` in your browser to see the WebViews.
 
-Inside of `Template.vue` we are going to change the contents of one variable **immediately**. We're going to change the ComponentName.
-
-**Before**
-```typescript
-const ComponentName = 'Template';
-```
-
-**After**
-```typescript
-const ComponentName = 'Test';
-```
-
-## Rename Template.vue
-
-Now we are going to rename `Template.vue` to the same name as our folder but we are going to ensure that the **First Letter is Capitalized**.
-
-**Before**
-
-![](https://i.imgur.com/c4qrEYy.png)
-
-**After**
-
-![](https://i.imgur.com/MPmUd7F.png)
-
-## Adding the Page
-
-Vite has no idea your page exists at this point. We're going to ensure that Vite sees it now.
-
-This step is probably the most confusing but it only requires modifying one file. I've tried to simplify this as much as possible but hopefully it's enough to understand. This is the equivalent of importing a file in TypeScript.
-
-Open the following file:
-
-```
-src-webviews/src/pages/components.ts
-```
-
-Inside you should see something like this...
-
-![](https://i.imgur.com/KfokYwr.png)
-
-This is where we are going to import our new page and append it to the `componentList` object.
-
-Let's import your `test` folder and `Test.vue` page.
-
-```typescript
-import Test from './test/Test.vue';
-```
-
-Then we append it to your componentList.
-
-```typescript
-const componentList = {
-    Atm: shallowRef(Atm),
-    CharacterCreator: shallowRef(CharacterCreator),
-    CharacterSelect: shallowRef(CharacterSelect),
-    Clothing: shallowRef(Clothing),
-    Designs: shallowRef(Designs),
-    Garage: shallowRef(Garage),
-    InputBox: shallowRef(InputBox),
-    Inventory: shallowRef(Inventory),
-    Login: shallowRef(Login),
-    Storage: shallowRef(Storage),
-    Test: shallowRef(Test)
-};
-```
-
-That's all we need to do to add the custom page. We can now run `npm run vue-dev` to see our page in the browser.
-
-![](https://i.imgur.com/rO48CEH.png)
-
-_If `vue-dev` was already running just `refresh` the browser._
+If you hover on the left-hand side of the page you will get a menu to see all currently loaded WebViews.
 
 ## Writing the HTML
 

@@ -3,7 +3,7 @@ description: >-
   Temporarily or infinitely attach an object to a client.
 ---
 
-# playerFuncs.emit.objectAttach
+# Athena.player.emit.objectAttach
 
 Allows users to have objects attached to their players. They can be temporarily added or added for the entire play session.
 
@@ -27,7 +27,7 @@ const attachable: IAttachable = {
     },
 };
 
-playerFuncs.emit.objectAttach(player, attachable, 5000);
+Athena.player.emit.objectAttach(player, attachable, 5000);
 ```
 
 ![](https://i.imgur.com/TucLJqC.png)

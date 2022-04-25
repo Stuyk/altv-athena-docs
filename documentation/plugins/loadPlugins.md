@@ -63,3 +63,11 @@ src/core/plugins/core-example
       │       Component2.vue
       │       Component3.vue
 ```
+
+### Enabling & Disabling Plugins
+
+In order to disable a plugin, create a file with one of the following names from the list below inside the root folder of the plugin (`src/core/plugins/<your-plugin>`):
+
+* `disable.plugin`
+* `disabled.plugin`
+* `disable`

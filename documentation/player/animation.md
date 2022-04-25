@@ -2,7 +2,7 @@
 description: Animations can be played from server-side.
 ---
 
-# playerFuncs.emit.animation
+# Athena.player.emit.animation
 
 In most cases you'll be wanting to play an animation from server-side as that's where a majority of our logic is going to be written. There's a player function to do this with ease.
 
@@ -35,14 +35,14 @@ Playing an animation can be done like this...
 
 ```typescript
 // Plays an animation forever.
-playerFuncs.emit.animation(player, 'dictionary', 'name', flags, -1);
+Athena.player.emit.animation(player, 'dictionary', 'name', flags, -1);
 ```
 
 **Example**
 
 ```typescript
 // Plays for 12 seconds.
-playerFuncs.emit.animation(
+Athena.player.emit.animation(
     player,
     'mp_car_bomb',
     'car_bomb_mechanic',
@@ -56,7 +56,7 @@ playerFuncs.emit.animation(
 If you ever find yourself needing to stop an animation there's a simple function to clear it.
 
 ```typescript
-playerFuncs.emit.clearAnimation(player);
+Athena.player.emit.clearAnimation(player);
 ```
 
 ## Scenarios

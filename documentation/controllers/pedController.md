@@ -21,7 +21,7 @@ const ped: IPed = {
     },
 };
 
-PedController.append(ped);
+Athena.controllers.ped.append(ped);
 ```
 
 # Example - Single User
@@ -39,7 +39,7 @@ const ped: IPed = {
     },
 };
 
-PedController.addToPlayer(ped);
+Athena.controllers.ped.addToPlayer(ped);
 ```
 
 # Play Animations for a Ped
@@ -59,5 +59,5 @@ let anim2: Animation = {
     duration: -1
 }
 
-PedController.playAnimation('test-ped-1', [anim1,anim2])
+Athena.controllers.ped.playAnimation('test-ped-1', [anim1,anim2])
 ```

@@ -13,7 +13,7 @@ Can only render one of these at a time in-world. Try to use them sparingly.
 # Example - World
 
 ```typescript
-const uid = WorldNotificationController.append({
+const uid = Athena.controllers.notification.append({
     text: 'Hello World!',
     type: WORLD_NOTIFICATION_TYPE.ARROW_BOTTOM,
     pos: { ...player.pos },
@@ -25,7 +25,7 @@ const uid = WorldNotificationController.append({
 _Keep in mind you should have a player reference to use this_
 
 ```typescript
-const uid = WorldNotificationController.addToPlayer(player, {
+const uid = Athena.controllers.notification.addToPlayer(player, {
     text: 'Hello World!',
     type: WORLD_NOTIFICATION_TYPE.ARROW_BOTTOM,
     pos: { ...player.pos },
@@ -36,6 +36,6 @@ alt.setTimeout(() => {
         return;
     }
 
-    WorldNotificationController.removeFromPlayer(player, uid);
+   Athena.controllers.notification.removeFromPlayer(player, uid);
 }, 5000);
 ```

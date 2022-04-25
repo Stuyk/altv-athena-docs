@@ -2,7 +2,7 @@
 description: Create particles on-screen for a player or players.
 ---
 
-# playerFuncs.emit.particle
+# Athena.player.emit.particle
 
 Create a simple particle emit that displays for the current player or all players near the player. Particles are like fancy effects that can show up in-game like smoke, sparks, etc.
 
@@ -21,7 +21,7 @@ _Accessible on Server Side_
 
 ```typescript
 // Last parameter if set to 'true' shows it for other players nearby.
-playerFuncs.emit.particle(player, {
+Athena.player.emit.particle(player, {
     pos: player.pos,
     dict: 'core',
     name: 'exp_water',

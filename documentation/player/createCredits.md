@@ -3,7 +3,7 @@ description: >-
     Create a simple credit overlay on screen.
 ---
 
-# playerFuncs.emit.createCredits
+# Athena.player.emit.createCredits
 
 Create a simple credit overlay on screen.
 
@@ -12,7 +12,7 @@ _Accessible on Server Side_
 # Example
 
 ```typescript
-playerFuncs.emit.createCredits(player, {
+Athena.player.emit.createCredits(player, {
     duration: 5000,
     role: 'Athena Creator',
     name: 'Stuyk',

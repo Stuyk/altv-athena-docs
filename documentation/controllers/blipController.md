@@ -17,7 +17,7 @@ Blip and Color List(s):
 # Example - World
 
 ```typescript
-const uid = ServerBlipController.append({
+const uid = Athena.controllers.blip.append({
     sprite: 616,
     color: 5,
     pos: { x: 0, y: 0, z: 0 },
@@ -32,7 +32,7 @@ const uid = ServerBlipController.append({
 _Keep in mind you should have a player reference to use this_
 
 ```typescript
-const uid = ServerBlipController.addToPlayer(player, {
+const uid = Athena.controllers.blip.addToPlayer(player, {
     sprite: 616,
     color: 5,
     pos: { x: 0, y: 0, z: 0 },
@@ -47,6 +47,6 @@ alt.setTimeout(() => {
         return;
     }
 
-    ServerBlipController.removeFromPlayer(player, uid);
+    Athena.controllers.blip.removeFromPlayer(player, uid);
 }, 5000);
 ```

@@ -3,7 +3,7 @@
 ## Info
 
 -   [Introduction](README.md)
--   [Support](https://patreon.com/stuyk)
+-   [Patreon & Support](https://patreon.com/stuyk)
 -   [Athena Discord](https://discord.gg/pZvbJmKN8Y)
 -   [FAQ](documentation/general/faq.md)
 
@@ -17,15 +17,10 @@
 ## Info
 
 -   [Admin](documentation/info/admin.md)
--   [Commands](documentation/info/commands.md)
 -   [Configuration](documentation/info/configuration.md)
 -   [Console](documentation/info/console.md)
 -   [Database](documentation/info/database.md)
 -   [Hotkeys](documentation/info/hotkeys.md)
-
-## Glossary
-
--   [Menu Types in Athena](documentation/glossary/menu-types.md)
 
 ## Plugins
 
@@ -37,10 +32,10 @@
 
 - [What is a Controller?](documentation/controllers/controller.md)
 - [Blip Controller](documentation/controllers/blipController.md)
+- [Interaction Controller](documentation/controllers/interactionController.md)
 - [Marker Controller](documentation/controllers/markerController.md)
 - [Object Controller](documentation/controllers/objectController.md)
 - [Ped Controller](documentation/controllers/pedController.md)
-- [Polygon Controller](documentation/controllers/polygonController.md)
 - [Text Label Controller](documentation/controllers/textLabelController.md)
 - [World Notification Controller](documentation/controllers/worldNotificationController.md)
 
@@ -89,7 +84,6 @@
 - [Custom Sounds](documentation/misc/createCustomSounds.md)
 - [Custom Streamers](documentation/misc/createCustomStreamer.md)
 - [Custom Icons](documentation/misc/createCustomIcons.md)
--   [Adding Factions](documentation/scripting/adding-factions.md)
 -   [Adding Locale / Translations](documentation/scripting/adding-locale.md)
 -   [Adding Vehicle Rules](documentation/scripting/adding-vehicle-rules.md)
 -   [Adding Whitelist](documentation/scripting/adding-whitelist.md)

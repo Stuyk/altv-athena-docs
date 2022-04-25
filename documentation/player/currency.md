@@ -2,7 +2,7 @@
 description: Currency related commands for individual players.
 ---
 
-# playerFuncs.currency
+# Athena.player.currency
 
 All currency related functionality for managing cash and bank values.
 
@@ -19,11 +19,11 @@ Cash is a value that can be considered `on-hand` while `bank` is money stored in
 This is pretty much just for administrative related things. Currency can bet set to an exact value.
 
 ```typescript
-playerFuncs.currency.set(player, CurrencyTypes.CASH, 50000)
+Athena.player.currency.set(player, CurrencyTypes.CASH, 50000)
 ```
 
 ```typescript
-playerFuncs.currency.set(player, CurrencyTypes.BANK, 50000)
+Athena.player.currency.set(player, CurrencyTypes.BANK, 50000)
 ```
 
 ## Adding Currency
@@ -31,7 +31,7 @@ playerFuncs.currency.set(player, CurrencyTypes.BANK, 50000)
 **Cash**
 
 ```typescript
-if (!playerFuncs.currency.add(player, CurrencyTypes.CASH, 25)) {
+if (!Athena.player.currency.add(player, CurrencyTypes.CASH, 25)) {
     // Did not add the currency successfully
     return;
 }
@@ -42,7 +42,7 @@ if (!playerFuncs.currency.add(player, CurrencyTypes.CASH, 25)) {
 **Bank**
 
 ```typescript
-if (!playerFuncs.currency.add(player, CurrencyTypes.BANK, 25)) {
+if (!Athena.player.currency.add(player, CurrencyTypes.BANK, 25)) {
     // Did not add the currency successfully
     return;
 }
@@ -55,7 +55,7 @@ if (!playerFuncs.currency.add(player, CurrencyTypes.BANK, 25)) {
 **Cash**
 
 ```typescript
-if (!playerFuncs.currency.sub(player, CurrencyTypes.CASH, 25)) {
+if (!Athena.player.currency.sub(player, CurrencyTypes.CASH, 25)) {
     // Did not remove the currency successfully
     return;
 }
@@ -66,7 +66,7 @@ if (!playerFuncs.currency.sub(player, CurrencyTypes.CASH, 25)) {
 **Bank**
 
 ```typescript
-if (!playerFuncs.currency.sub(player, CurrencyTypes.BANK, 25)) {
+if (!Athena.player.currency.sub(player, CurrencyTypes.BANK, 25)) {
     // Did not remove the currency successfully
     return;
 }
@@ -92,7 +92,7 @@ If the cost of an item is 150; you can use subAllCurrencies to subtract 100 from
 **Example**
 
 ```typescript
-if (!playerFuncs.currency.subAllCurrencies(player, 25)) {
+if (!Athena.player.currency.subAllCurrencies(player, 25)) {
     // Did not have enough to remove all.
     return;
 }
