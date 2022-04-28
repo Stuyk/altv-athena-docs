@@ -390,12 +390,12 @@ General commands which can be executed by players with administrative power
 
 **Usage**
 ```bash
-/makeAdmin [id] - Add permission to specified player
+/makeAdmin [id] [PermissionLevel] - Add permission to specified player
 ```
 
 **Example**
 ```bash
-/makeAdmin 0
+/makeAdmin 0 4
 ```
 
 # info
