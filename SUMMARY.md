@@ -56,11 +56,12 @@
 - [Wheel Menu](documentation/menus/wheelMenu.md)
 
 ## Player
-
+- [Admin-Commands](documentation/player/admin-commands.md)
 - [Animations](documentation/player/animation.md)
 - [Attach Objects](documentation/player/objectAttach.md)
 - [Credits](documentation/player/createCredits.md)
 - [Currency](documentation/player/currency.md)
+- [Commands](documentation/player/commands.md)
 - [Error Screen](documentation/player/createErrorScreen.md)
 - [Message](documentation/player/message.md)
 - [Meta](documentation/player/meta.md)

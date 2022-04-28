@@ -1,6 +1,9 @@
 ---
 description: General ingame commands for players
 ---
+
+General commands which can be executed by players
+
 ## Commands
 - [do](#do)
 - [low](#low)
