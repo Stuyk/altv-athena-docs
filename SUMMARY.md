@@ -56,7 +56,7 @@
 - [Wheel Menu](documentation/menus/wheelMenu.md)
 
 ## Player
-- [Admin-Commands](document/../documentation/player/admin-commands.md)
+- [Admin-Commands](documentation/player/admin-commands.md)
 - [Animations](documentation/player/animation.md)
 - [Attach Objects](documentation/player/objectAttach.md)
 - [Credits](documentation/player/createCredits.md)
