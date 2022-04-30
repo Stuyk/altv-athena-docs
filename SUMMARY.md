@@ -4,7 +4,7 @@
 
 -   [Introduction](README.md)
 -   [Patreon & Support](https://patreon.com/stuyk)
--   [Athena Discord](https://discord.gg/pZvbJmKN8Y)
+-   [Athena Discord](https://discord.gg/AzqtCrE8Xs)
 -   [FAQ](documentation/general/faq.md)
 
 ## Installation
