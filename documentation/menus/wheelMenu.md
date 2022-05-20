@@ -18,7 +18,7 @@ Wheel Menu's are exactly how they sound. It's a wheel with a bunch of items you 
 This example simply has an event where if an event is passed from server to server. It will
 log the current data the WheelMenu Option holds into the server console.
 
-```ts
+```typescript
 InteractionController.add({
     position: { x: 0, y: 1, z: 71 },
     description: 'Open Wheelmenu',
@@ -51,7 +51,7 @@ alt.onClient('WheelMenu-TestEvent', (player: alt.Player, data: Array<any>) => {
 
 # Basic Example - Clientside
 This example simply has an callback where data is passed into. It will log the current data the WheelMenu Option holds into the developer (F8) console.
-```ts
+```typescript
 alt.on('keydown', (key) => {
     if(key === 71) {
         const menu: Array<IWheelOptionExt> = [
@@ -81,7 +81,7 @@ alt.on('keydown', (key) => {
 - Disclaimer: The IWheelOption will work on both sides, while the IWheelOptionExt will only work on the clientside.
 
 
-```ts
+```typescript
 export interface IWheelOption {
     /**
      * The name of this option.
