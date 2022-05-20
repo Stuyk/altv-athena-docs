@@ -1,92 +1,164 @@
 ---
-description: Learn how to build a Wheel Menu.
+description: Learn how to build a WheelMenu in the Athena Framework on both sides.
 ---
 
 # Summary
 
-Wheel Menu's are exactly how they sound. It's a wheel with a bunch of items you can select. Those items inside of the menu can have other items buried behind it. They can currently only be created on `client-side`.
+Wheel Menu's are exactly how they sound. It's a wheel with a bunch of items you can select. Those items inside of the menu can have other items buried behind it.
+
+* To create a nested WheelMenu just add more then 8 Options and scroll the page (handled automatically)
 
 # Video Guide
 
-[![Interaction Video Guide](https://img.youtube.com/vi/15K0IWaTrhw/0.jpg)](https://www.youtube.com/watch?v=15K0IWaTrhw)
+- Currently not available
 
-# Basic Example
 
-This example simply has an event where if an event is passed from server to client. It will open this menu.
+# Basic Example - Serverside
 
-```typescript
-import * as alt from 'alt-client';
-import { IWheelItem, WheelMenu } from '../utility/wheelMenu'; 
-// May not be a valid path. Use auto-import feature from your code editor.
+This example simply has an event where if an event is passed from server to server. It will
+log the current data the WheelMenu Option holds into the server console.
 
-alt.onServer('open:MyMenu', () => {
-
-    WheelMenu.create(
-        'Description in Middle',
-        [
+```ts
+InteractionController.add({
+    position: { x: 0, y: 1, z: 71 },
+    description: 'Open Wheelmenu',
+    callback: (player: alt.Player) => {
+        const menu: Array<IWheelOption> = [
             {
-                name: 'Say Hi in Console',
-                callback: () => {
-                    alt.log('Hello World!');
-                }
-            }
-        ],
-        true // Should we move the cursor to the middle for this menu?
-    );
+                name: 'Test the menu!',
+                icon: 'icon-house',
+                color: 'red',
+                data: [
+                    {
+                        description: 'Test the menu!',
+                        icon: 'current icon is => icon-house',
+                        color: 'current color is => red',
+                    }
+                ],
+                doNotClose: false,
+                emitServer: 'WheelMenu-TestEvent',
+            },
+        ];
+        Athena.player.emit.wheelMenu(player, 'Hello World!', menu);
+    },
+});
+
+alt.onClient('WheelMenu-TestEvent', (player: alt.Player, data: Array<any>) => {
+    console.log('WheelMenu-TestEvent got fired! Hello World!');
+    console.log(`Current Data of test-event => ${JSON.stringify(data)}`);
 });
 ```
 
-# Nested Example
-
-```typescript
-import * as alt from 'alt-client';
-import { IWheelItem, WheelMenu } from '../utility/wheelMenu'; 
-// May not be a valid path. Use auto-import feature from your code editor.
-
-alt.onServer('open:MyMenu', () => {
-    WheelMenu.create(
-        'First Menu',
-        [
+# Basic Example - Clientside
+This example simply has an callback where data is passed into. It will log the current data the WheelMenu Option holds into the developer (F8) console.
+```ts
+alt.on('keydown', (key) => {
+    if(key === 71) {
+        const menu: Array<IWheelOptionExt> = [
             {
-                name: 'Go to "A" Second Menu',
-                callback: aSecondMenu
-            },
-             {
-                name: 'Go to "B" Second Menu',
-                callback: bSecondMenu
-            }
-        ],
-        true // Should we move the cursor to the middle for this menu?
-    );
-});
-
-function aSecondMenu() {
-    WheelMenu.create(
-        'Second Menu A',
-        [
-            {
-                name: 'log something',
-                callback: () => {
-                    console.log('item from a')
+                name: 'Test the menu!',
+                icon: 'icon-house',
+                color: 'red',
+                data: [
+                    {
+                        description: 'Test the menu!',
+                        icon: 'current icon is => icon-house',
+                        color: 'current color is => red',
+                    }
+                ],
+                doNotClose: false,
+                callback: (data: Array<string>) => {
+                    console.log(`Data of Clientsided WheelMenu => ${JSON.stringify(data)}`);
                 }
-            }
-        ],
-        false
-    );
+            },
+        ];
+        WheelMenu.open('Clientsided', menu);
+    }
+});
+```
+# Valid Options
+
+- Disclaimer: The IWheelOption will work on both sides, while the IWheelOptionExt will only work on the clientside.
+
+
+```ts
+export interface IWheelOption {
+    /**
+     * The name of this option.
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    name: string;
+    /**
+     * A unique identifier for this option.
+     *
+     * If not specified one will automatically be created.
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    uid?: string;
+
+    /**
+     * A plain text color for the icon and text color.
+     *
+     * ie. `red`, `green`, `yellow`, etc.
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    color?: string;
+
+    /**
+     * An icon from the `icons` page in the pages.
+     *
+     * ie. `icon-home`
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    icon?: string;
+
+    /**
+     * Do not close the wheel menu after executing this option.
+     *
+     * @type {boolean}
+     * @memberof IWheelOption
+     */
+    doNotClose?: boolean;
+
+    /**
+     * From the client, call a specific server event through alt.emitServer
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    emitServer?: string;
+
+    /**
+     * From the client, emit a client event through alt.emit
+     *
+     * @type {string}
+     * @memberof IWheelOption
+     */
+    emitClient?: string;
+
+    /**
+     * Any data that you want to pass through a callback or an event.
+     *
+     * @type {Array<any>}
+     * @memberof IWheelOptionExt
+     */
+    data?: Array<any>;
 }
 
-function bSecondMenu() {
-    WheelMenu.create(
-        'Second Menu B',
-        [
-            {
-                name: 'log something',
-                callback: () => {
-                    console.log('item from b');
-                }
-            }
-        ],
-        false
-    );
+export interface IWheelOptionExt extends IWheelOption {
+    /**
+     * A callback that will only work on client-side.
+     *
+     * @memberof IWheelOptionExt
+     */
+    callback?: (...args: any[]) => void;
 }
 ```
