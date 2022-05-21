@@ -14,19 +14,20 @@ After following those general instructions read further below on where to put yo
 
 ```
 📁 altv-athena/
-    L 📁 mods/
-        |- 📁 a-mod/
-        |    |- stream.cfg
-        |    |- resource.cfg
-        |    L 📁 stream/
-        |- 📁 some-mod/
-        |    |- stream.cfg
-        |    |- resource.cfg
-        |    L 📁 stream/
-        L 📁 whatever-mod/
-            |- stream.cfg
-            |- resource.cfg
-            L 📁 stream/
+    L 📁 resources/
+        L 📁 mods/
+            |- 📁 a-mod/
+            |    |- stream.cfg
+            |    |- resource.cfg
+            |    L 📁 stream/
+            |- 📁 some-mod/
+            |    |- stream.cfg
+            |    |- resource.cfg
+            |    L 📁 stream/
+            L 📁 whatever-mod/
+                |- stream.cfg
+                |- resource.cfg
+                L 📁 stream/
 ```
 
 ## Add to server.cfg
@@ -39,7 +40,13 @@ Navigate to one of the following files:
 *  `config/devtest.json`
 *  `config/dev.json`
 
-Add the name of your resource to the `resources` section.
+Add the name of your resource and the folder path to the `resources` section.
+
+Example:
+
+* `mods/teslacar`
+* `mods/hospital`
+* `mods/fastcar`
 
 ## Load Order
 
@@ -50,7 +57,7 @@ Ensure you edit configurations in the `configs` folder.
 Example:
 
 ```ts
-resources: ["a-mod", "some-mod", "whatever-mod", "webviews", "core"],
+resources: ["mods/a-mod", "mods/some-mod", "mods/whatever-mod", "webviews", "core"],
 ```
 
 _It is highly recommended that if you are actively developing that you leave major MLOs off as it increases load time._
@@ -59,11 +66,7 @@ _It is highly recommended that if you are actively developing that you leave maj
 
 Mods are a bit tricky with alt:V but the alt:V Discord should always be your \#1 place to ask for modding support and ask general questions.
 
-**DO NOT PLACE ANYTHING IN THE `./resources` FOLDER**
-
-Anything inside of `./resources` will always be deleted when you compile or start this game mode.
-
-Anything inside of the `./mods` folder will be loaded at runtime.
+**ALL MODS SHOULD BE PLACED INSIDE `./resources/mods`. ANYTHING OUTSIDE THIS FOLDER GETS DELETED**
 
 This is necessary to ensure a clean build is created for each deployment.
 
@@ -71,11 +74,11 @@ This is necessary to ensure a clean build is created for each deployment.
 
 **Folder Path**
 
-`./mods/hospital`
+`./resources/mods/hospital`
 
 **Resource Name**
 
-`hospital`
+`mods/hospital`
 
 ## Vehicle Mods
 
