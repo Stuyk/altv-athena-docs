@@ -75,7 +75,7 @@ General commands which can be executed by players with administrative power
 
 **Example**
 ```bash
-/setcash 0 10000
+/setcash 1000 0
 ```
 
 # addbank
