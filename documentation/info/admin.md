@@ -65,6 +65,8 @@ export enum PERMISSIONS {
 }
 ```
 
+(This config can be found in `/core/shared/flags/permissionFlags.ts`)
+
 To give someone access to all admin commands you can write into your `server terminal` the following command:
 
 `/setadmin <discord_id> <permission_level>`
