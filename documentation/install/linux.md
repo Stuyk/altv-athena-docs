@@ -1,11 +1,11 @@
 ---
 description: >-
-    How to install Athena on Ubuntu 18.04 or 20+
+    How to install Athena on Ubuntu 20+
 ---
 
 # Linux
 
-Linux installation should be using Ubuntu 18.04 or greater. The author of this documentation has used Ubuntu 18.04 without any issues.
+Linux installation should be using Ubuntu 20.04+ or greater. The author of this documentation has used Ubuntu 20.04+ without any issues.
 
 # Table of Contents
 

@@ -3,7 +3,7 @@ description: >-
     How to install Athena in any Windows Environment
 ---
 
-# Install on Windows
+# Install on Windows 10+
 
 Installing on windows is very straight forward but you will need to do a handful of things to ensure your environment is setup correctly. There is a lot to cover when installing Athena but these instructions cover nearly everything you need to do in a Windows Environment to get Athena running.
 
@@ -11,7 +11,7 @@ Read them carefully, read them twice, and double check your steps.
 
 # Table of Contents
 
-- [Install on Windows](#install-on-windows)
+- [Install on Windows 10+](#install-on-windows-10)
 - [Table of Contents](#table-of-contents)
 - [Dependencies](#dependencies)
   - [GIT](#git)
