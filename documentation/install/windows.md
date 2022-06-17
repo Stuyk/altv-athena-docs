@@ -345,7 +345,7 @@ Remember to get the [https://altv.mp/](https://altv.mp) client and connect.
 
 ## What IP to use?
 
-If you are running this on your local machine you should connect to `127.0.0.1:7788`.
+If you are running this on your local machine you should connect to `127.0.0.1:7788` or `0.0.0.0:7788` if it does not work.
 
 If you are running this on an external server you should connect to the server's IP address.
 

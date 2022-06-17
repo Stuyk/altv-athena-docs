@@ -9,6 +9,7 @@
 
 ## Installation
 
+- [Common Issues](documentation/install/common-issues.md)
 - [Windows](documentation/install/windows.md)
 - [Linux (Ubuntu 20.04+)](documentation/install/linux.md)
 - [Debugging](documentation/install/debugging.md)
