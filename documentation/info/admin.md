@@ -6,6 +6,22 @@ description: Administrative stuff for Athena Framework
 
 Athena Framework does have some generic administrative modes but they're mostly restricted to the console at the moment. However, you can give certain accounts access to commands through the permission system.
 
+## How to be an Admin?
+
+If you want to give yourself admin permissions. You need to get your discord id out of discord.
+
+![](https://i.imgur.com/6PgYFQE.png)
+
+Then right-click on yourself in any server, channel, etc. and get your identifier.
+
+![](https://i.imgur.com/VKWfEXb.png)
+
+Start your server and make sure you already have an account and have logged into that account.
+
+In your console type `/setadmin your_discord_id_here 4`
+
+![](https://i.imgur.com/EtNxYqz.png)
+
 ## How do Permissions Work?
 
 Let's talk about how permissions work and why you really need to understand this concept when you're writing commands. Permissions use a bitwise function to determine who can access what commands.

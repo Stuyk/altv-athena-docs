@@ -34,6 +34,7 @@ Linux installation should be using Ubuntu 20.04+ or greater. The author of this 
   - [Download from Private Repo](#download-from-private-repo)
   - [Enter the Directory](#enter-the-directory)
   - [Add Upstream](#add-upstream)
+  - [Pushing updates](#pushing-updates)
 - [Installing Dependencies](#installing-dependencies)
 - [Installing Server Files](#installing-server-files)
 - [Starting the Server](#starting-the-server)
@@ -250,7 +251,9 @@ Enter the following in a terminal:
 cd altv-athena-bare
 ```
 
-Mirror the bare repository to your private mirror.
+Then you are going to mirror the bare repository to your private mirror.
+
+Which means you will have a private copy of Athena's code base on your private github.
 
 Enter the following in a terminal:
 
@@ -272,30 +275,45 @@ This is important and **DO NOT SKIP THIS STEP**.
 
 Clone the new repository you created from Github.
 
+You can find the new repository you created in your Github profile's repository section.
+
 Enter the following in a terminal:
 
 ```bash
-git clone <your_github_url_here>
+git clone the_url_from_your_private_github_repo
 ```
 
 ## Enter the Directory
 
-You need to enter the directory to run the next few commands.
+You need to navigate into the directory to run the next few commands.
 
 Enter the following in a terminal:
 
 ```bash
-cd <your_repo_name>
+cd your_repo_name
 ```
 
 ## Add Upstream
 
 Add the upstream of the original athena repository.
 
+This step must be done any time you need re-clone your repository.
+
 ```bash
 git remote add upstream https://github.com/Stuyk/altv-athena
 git remote set-url --push upstream DISABLE
 ```
+
+## Pushing updates
+
+When you make changes to the code base you can push it by doing:
+
+```
+git add .
+git commit -m "Whatever You Changed"
+git push origin master
+```
+
 
 # Installing Dependencies
 

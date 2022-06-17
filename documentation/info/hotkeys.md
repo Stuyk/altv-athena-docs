@@ -7,11 +7,12 @@ description: All of the current hotkeys available.
 ## On Foot
 
 -   F1 - Print Position, Rotation, and Heading in Console
--   E - Interact
+-   E - Interact / Wheel Menu
 -   I - Inventory
 
 ## Vehicle
 
+-   Shift + E - Wheel Menu In-Vehicle
 -   F - Enter Vehicle / Exit Vehicle
 -   X - Toggle Lock
 -   Y - Toggle Engine

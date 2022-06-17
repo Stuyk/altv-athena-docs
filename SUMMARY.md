@@ -10,7 +10,7 @@
 ## Installation
 
 - [Windows](documentation/install/windows.md)
-- [Linux (Ubuntu 18.04+)](documentation/install/linux.md)
+- [Linux (Ubuntu 20.04+)](documentation/install/linux.md)
 - [Debugging](documentation/install/debugging.md)
 - [Updating](documentation/install/updating.md)
 
@@ -21,6 +21,7 @@
 -   [Console](documentation/info/console.md)
 -   [Database](documentation/info/database.md)
 -   [Hotkeys](documentation/info/hotkeys.md)
+-   [Identifier](documentation/info/identifier.md)
 
 ## Plugins
 

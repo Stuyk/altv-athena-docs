@@ -10,17 +10,35 @@ If you have implemented code but are not sure how to find an error then there's 
 
 - [Debugging Athena](#debugging-athena)
 - [Table of Contents](#table-of-contents)
+  - [Fixing Installation Issues](#fixing-installation-issues)
   - [Debugging Code](#debugging-code)
-    - [npx tsc](#npx-tsc)
+    - [npm run check](#npm-run-check)
     - [Open Console in-game](#open-console-in-game)
   - [Common Issues](#common-issues)
     - [Black Screen on Join](#black-screen-on-join)
   - [Can't find the Error?](#cant-find-the-error)
 
+## Fixing Installation Issues
+
+Issues with node_modules or certain modules not being found when starting the gamemode can usually be resolved by running the following command.
+
+```
+npm run fix
+```
+
+After you should install the gamemode normally.
+
+```
+npm install
+```
+
+```
+npm run update
+```
 
 ## Debugging Code
 
-### npx tsc
+### npm run check
 
 This command you run your terminal will use the generic typescript compiler to help you find a `bug` in your code. If there's an issue it will tell you the exact file, and line number.
 
@@ -31,7 +49,7 @@ To utilize this simply run in your terminal:
 Enter the following in a terminal:
 
 ```
-npx tsc
+npm run check
 ```
 
 ### Open Console in-game
